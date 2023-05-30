@@ -1,0 +1,624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE398DDC2A26051D001B76B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE398DDB2A26051D001B76B1 /* AppDelegate.swift */; };
+		CE398DDE2A26051D001B76B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE398DDD2A26051D001B76B1 /* SceneDelegate.swift */; };
+		CE398DE02A26051D001B76B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE398DDF2A26051D001B76B1 /* ViewController.swift */; };
+		CE398DE32A26051D001B76B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE398DE12A26051D001B76B1 /* Main.storyboard */; };
+		CE398DE62A26051D001B76B1 /* BinanceTradeHistrory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE398DE42A26051D001B76B1 /* BinanceTradeHistrory.xcdatamodeld */; };
+		CE398DE82A260520001B76B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE398DE72A260520001B76B1 /* Assets.xcassets */; };
+		CE398DEB2A260520001B76B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE398DE92A260520001B76B1 /* LaunchScreen.storyboard */; };
+		CE398DF62A260520001B76B1 /* BinanceTradeHistroryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE398DF52A260520001B76B1 /* BinanceTradeHistroryTests.swift */; };
+		CE398E002A260520001B76B1 /* BinanceTradeHistroryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE398DFF2A260520001B76B1 /* BinanceTradeHistroryUITests.swift */; };
+		CE398E022A260520001B76B1 /* BinanceTradeHistroryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE398E012A260520001B76B1 /* BinanceTradeHistroryUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE398DF22A260520001B76B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE398DD02A26051D001B76B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE398DD72A26051D001B76B1;
+			remoteInfo = BinanceTradeHistrory;
+		};
+		CE398DFC2A260520001B76B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE398DD02A26051D001B76B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE398DD72A26051D001B76B1;
+			remoteInfo = BinanceTradeHistrory;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CE398DD82A26051D001B76B1 /* BinanceTradeHistrory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BinanceTradeHistrory.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE398DDB2A26051D001B76B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE398DDD2A26051D001B76B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CE398DDF2A26051D001B76B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE398DE22A26051D001B76B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE398DE52A26051D001B76B1 /* BinanceTradeHistrory.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BinanceTradeHistrory.xcdatamodel; sourceTree = "<group>"; };
+		CE398DE72A260520001B76B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE398DEA2A260520001B76B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE398DEC2A260520001B76B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE398DF12A260520001B76B1 /* BinanceTradeHistroryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BinanceTradeHistroryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE398DF52A260520001B76B1 /* BinanceTradeHistroryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinanceTradeHistroryTests.swift; sourceTree = "<group>"; };
+		CE398DFB2A260520001B76B1 /* BinanceTradeHistroryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BinanceTradeHistroryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE398DFF2A260520001B76B1 /* BinanceTradeHistroryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinanceTradeHistroryUITests.swift; sourceTree = "<group>"; };
+		CE398E012A260520001B76B1 /* BinanceTradeHistroryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinanceTradeHistroryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE398DD52A26051D001B76B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE398DEE2A260520001B76B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE398DF82A260520001B76B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE398DCF2A26051D001B76B1 = {
+			isa = PBXGroup;
+			children = (
+				CE398DDA2A26051D001B76B1 /* BinanceTradeHistrory */,
+				CE398DF42A260520001B76B1 /* BinanceTradeHistroryTests */,
+				CE398DFE2A260520001B76B1 /* BinanceTradeHistroryUITests */,
+				CE398DD92A26051D001B76B1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE398DD92A26051D001B76B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE398DD82A26051D001B76B1 /* BinanceTradeHistrory.app */,
+				CE398DF12A260520001B76B1 /* BinanceTradeHistroryTests.xctest */,
+				CE398DFB2A260520001B76B1 /* BinanceTradeHistroryUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE398DDA2A26051D001B76B1 /* BinanceTradeHistrory */ = {
+			isa = PBXGroup;
+			children = (
+				CE398DDB2A26051D001B76B1 /* AppDelegate.swift */,
+				CE398DDD2A26051D001B76B1 /* SceneDelegate.swift */,
+				CE398DDF2A26051D001B76B1 /* ViewController.swift */,
+				CE398DE12A26051D001B76B1 /* Main.storyboard */,
+				CE398DE72A260520001B76B1 /* Assets.xcassets */,
+				CE398DE92A260520001B76B1 /* LaunchScreen.storyboard */,
+				CE398DEC2A260520001B76B1 /* Info.plist */,
+				CE398DE42A26051D001B76B1 /* BinanceTradeHistrory.xcdatamodeld */,
+			);
+			path = BinanceTradeHistrory;
+			sourceTree = "<group>";
+		};
+		CE398DF42A260520001B76B1 /* BinanceTradeHistroryTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE398DF52A260520001B76B1 /* BinanceTradeHistroryTests.swift */,
+			);
+			path = BinanceTradeHistroryTests;
+			sourceTree = "<group>";
+		};
+		CE398DFE2A260520001B76B1 /* BinanceTradeHistroryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CE398DFF2A260520001B76B1 /* BinanceTradeHistroryUITests.swift */,
+				CE398E012A260520001B76B1 /* BinanceTradeHistroryUITestsLaunchTests.swift */,
+			);
+			path = BinanceTradeHistroryUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE398DD72A26051D001B76B1 /* BinanceTradeHistrory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE398E052A260520001B76B1 /* Build configuration list for PBXNativeTarget "BinanceTradeHistrory" */;
+			buildPhases = (
+				CE398DD42A26051D001B76B1 /* Sources */,
+				CE398DD52A26051D001B76B1 /* Frameworks */,
+				CE398DD62A26051D001B76B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BinanceTradeHistrory;
+			productName = BinanceTradeHistrory;
+			productReference = CE398DD82A26051D001B76B1 /* BinanceTradeHistrory.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE398DF02A260520001B76B1 /* BinanceTradeHistroryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE398E082A260520001B76B1 /* Build configuration list for PBXNativeTarget "BinanceTradeHistroryTests" */;
+			buildPhases = (
+				CE398DED2A260520001B76B1 /* Sources */,
+				CE398DEE2A260520001B76B1 /* Frameworks */,
+				CE398DEF2A260520001B76B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE398DF32A260520001B76B1 /* PBXTargetDependency */,
+			);
+			name = BinanceTradeHistroryTests;
+			productName = BinanceTradeHistroryTests;
+			productReference = CE398DF12A260520001B76B1 /* BinanceTradeHistroryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CE398DFA2A260520001B76B1 /* BinanceTradeHistroryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE398E0B2A260520001B76B1 /* Build configuration list for PBXNativeTarget "BinanceTradeHistroryUITests" */;
+			buildPhases = (
+				CE398DF72A260520001B76B1 /* Sources */,
+				CE398DF82A260520001B76B1 /* Frameworks */,
+				CE398DF92A260520001B76B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE398DFD2A260520001B76B1 /* PBXTargetDependency */,
+			);
+			name = BinanceTradeHistroryUITests;
+			productName = BinanceTradeHistroryUITests;
+			productReference = CE398DFB2A260520001B76B1 /* BinanceTradeHistroryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE398DD02A26051D001B76B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					CE398DD72A26051D001B76B1 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					CE398DF02A260520001B76B1 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = CE398DD72A26051D001B76B1;
+					};
+					CE398DFA2A260520001B76B1 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = CE398DD72A26051D001B76B1;
+					};
+				};
+			};
+			buildConfigurationList = CE398DD32A26051D001B76B1 /* Build configuration list for PBXProject "BinanceTradeHistrory" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE398DCF2A26051D001B76B1;
+			productRefGroup = CE398DD92A26051D001B76B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE398DD72A26051D001B76B1 /* BinanceTradeHistrory */,
+				CE398DF02A260520001B76B1 /* BinanceTradeHistroryTests */,
+				CE398DFA2A260520001B76B1 /* BinanceTradeHistroryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE398DD62A26051D001B76B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE398DEB2A260520001B76B1 /* LaunchScreen.storyboard in Resources */,
+				CE398DE82A260520001B76B1 /* Assets.xcassets in Resources */,
+				CE398DE32A26051D001B76B1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE398DEF2A260520001B76B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE398DF92A260520001B76B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE398DD42A26051D001B76B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE398DE02A26051D001B76B1 /* ViewController.swift in Sources */,
+				CE398DDC2A26051D001B76B1 /* AppDelegate.swift in Sources */,
+				CE398DDE2A26051D001B76B1 /* SceneDelegate.swift in Sources */,
+				CE398DE62A26051D001B76B1 /* BinanceTradeHistrory.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE398DED2A260520001B76B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE398DF62A260520001B76B1 /* BinanceTradeHistroryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE398DF72A260520001B76B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE398E022A260520001B76B1 /* BinanceTradeHistroryUITestsLaunchTests.swift in Sources */,
+				CE398E002A260520001B76B1 /* BinanceTradeHistroryUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE398DF32A260520001B76B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE398DD72A26051D001B76B1 /* BinanceTradeHistrory */;
+			targetProxy = CE398DF22A260520001B76B1 /* PBXContainerItemProxy */;
+		};
+		CE398DFD2A260520001B76B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE398DD72A26051D001B76B1 /* BinanceTradeHistrory */;
+			targetProxy = CE398DFC2A260520001B76B1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CE398DE12A26051D001B76B1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE398DE22A26051D001B76B1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CE398DE92A260520001B76B1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE398DEA2A260520001B76B1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE398E032A260520001B76B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE398E042A260520001B76B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE398E062A260520001B76B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7L7CZY9WNN;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BinanceTradeHistrory/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = BinanceTradeHistrory.BinanceTradeHistrory;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE398E072A260520001B76B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7L7CZY9WNN;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BinanceTradeHistrory/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = BinanceTradeHistrory.BinanceTradeHistrory;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CE398E092A260520001B76B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7L7CZY9WNN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = BinanceTradeHistrory.BinanceTradeHistroryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BinanceTradeHistrory.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BinanceTradeHistrory";
+			};
+			name = Debug;
+		};
+		CE398E0A2A260520001B76B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7L7CZY9WNN;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = BinanceTradeHistrory.BinanceTradeHistroryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BinanceTradeHistrory.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BinanceTradeHistrory";
+			};
+			name = Release;
+		};
+		CE398E0C2A260520001B76B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7L7CZY9WNN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = BinanceTradeHistrory.BinanceTradeHistroryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BinanceTradeHistrory;
+			};
+			name = Debug;
+		};
+		CE398E0D2A260520001B76B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7L7CZY9WNN;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = BinanceTradeHistrory.BinanceTradeHistroryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BinanceTradeHistrory;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE398DD32A26051D001B76B1 /* Build configuration list for PBXProject "BinanceTradeHistrory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE398E032A260520001B76B1 /* Debug */,
+				CE398E042A260520001B76B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE398E052A260520001B76B1 /* Build configuration list for PBXNativeTarget "BinanceTradeHistrory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE398E062A260520001B76B1 /* Debug */,
+				CE398E072A260520001B76B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE398E082A260520001B76B1 /* Build configuration list for PBXNativeTarget "BinanceTradeHistroryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE398E092A260520001B76B1 /* Debug */,
+				CE398E0A2A260520001B76B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE398E0B2A260520001B76B1 /* Build configuration list for PBXNativeTarget "BinanceTradeHistroryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE398E0C2A260520001B76B1 /* Debug */,
+				CE398E0D2A260520001B76B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CE398DE42A26051D001B76B1 /* BinanceTradeHistrory.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CE398DE52A26051D001B76B1 /* BinanceTradeHistrory.xcdatamodel */,
+			);
+			currentVersion = CE398DE52A26051D001B76B1 /* BinanceTradeHistrory.xcdatamodel */;
+			path = BinanceTradeHistrory.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CE398DD02A26051D001B76B1 /* Project object */;
+}
