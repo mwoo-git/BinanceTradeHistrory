@@ -17,6 +17,9 @@
 		CE398DF62A260520001B76B1 /* BinanceTradeHistroryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE398DF52A260520001B76B1 /* BinanceTradeHistroryTests.swift */; };
 		CE398E002A260520001B76B1 /* BinanceTradeHistroryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE398DFF2A260520001B76B1 /* BinanceTradeHistroryUITests.swift */; };
 		CE398E022A260520001B76B1 /* BinanceTradeHistroryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE398E012A260520001B76B1 /* BinanceTradeHistroryUITestsLaunchTests.swift */; };
+		CE398E132A2605BD001B76B1 /* MainTabContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE398E122A2605BD001B76B1 /* MainTabContoller.swift */; };
+		CE398E192A2606AF001B76B1 /* TradeHistroryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE398E182A2606AF001B76B1 /* TradeHistroryController.swift */; };
+		CE398E1D2A2609F3001B76B1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CE398E1C2A2609F3001B76B1 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		CE398DFB2A260520001B76B1 /* BinanceTradeHistroryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BinanceTradeHistroryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE398DFF2A260520001B76B1 /* BinanceTradeHistroryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinanceTradeHistroryUITests.swift; sourceTree = "<group>"; };
 		CE398E012A260520001B76B1 /* BinanceTradeHistroryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinanceTradeHistroryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CE398E122A2605BD001B76B1 /* MainTabContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabContoller.swift; sourceTree = "<group>"; };
+		CE398E182A2606AF001B76B1 /* TradeHistroryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeHistroryController.swift; sourceTree = "<group>"; };
+		CE398E1C2A2609F3001B76B1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 		CE398DCF2A26051D001B76B1 = {
 			isa = PBXGroup;
 			children = (
+				CE398E1C2A2609F3001B76B1 /* .gitignore */,
 				CE398DDA2A26051D001B76B1 /* BinanceTradeHistrory */,
 				CE398DF42A260520001B76B1 /* BinanceTradeHistroryTests */,
 				CE398DFE2A260520001B76B1 /* BinanceTradeHistroryUITests */,
@@ -101,6 +108,8 @@
 		CE398DDA2A26051D001B76B1 /* BinanceTradeHistrory */ = {
 			isa = PBXGroup;
 			children = (
+				CE398E0F2A26054F001B76B1 /* Screens */,
+				CE398E0E2A260546001B76B1 /* Global */,
 				CE398DDB2A26051D001B76B1 /* AppDelegate.swift */,
 				CE398DDD2A26051D001B76B1 /* SceneDelegate.swift */,
 				CE398DDF2A26051D001B76B1 /* ViewController.swift */,
@@ -128,6 +137,70 @@
 				CE398E012A260520001B76B1 /* BinanceTradeHistroryUITestsLaunchTests.swift */,
 			);
 			path = BinanceTradeHistroryUITests;
+			sourceTree = "<group>";
+		};
+		CE398E0E2A260546001B76B1 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				CE398E172A260662001B76B1 /* Models */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		CE398E0F2A26054F001B76B1 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				CE398E102A260559001B76B1 /* main */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		CE398E102A260559001B76B1 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				CE398E142A260642001B76B1 /* TradeHistory */,
+				CE398E112A260563001B76B1 /* Controllers */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		CE398E112A260563001B76B1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE398E122A2605BD001B76B1 /* MainTabContoller.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CE398E142A260642001B76B1 /* TradeHistory */ = {
+			isa = PBXGroup;
+			children = (
+				CE398E162A26065A001B76B1 /* ViewModels */,
+				CE398E152A260653001B76B1 /* Controllers */,
+			);
+			path = TradeHistory;
+			sourceTree = "<group>";
+		};
+		CE398E152A260653001B76B1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE398E182A2606AF001B76B1 /* TradeHistroryController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CE398E162A26065A001B76B1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CE398E172A260662001B76B1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +307,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE398E1D2A2609F3001B76B1 /* .gitignore in Resources */,
 				CE398DEB2A260520001B76B1 /* LaunchScreen.storyboard in Resources */,
 				CE398DE82A260520001B76B1 /* Assets.xcassets in Resources */,
 				CE398DE32A26051D001B76B1 /* Main.storyboard in Resources */,
@@ -263,6 +337,8 @@
 			files = (
 				CE398DE02A26051D001B76B1 /* ViewController.swift in Sources */,
 				CE398DDC2A26051D001B76B1 /* AppDelegate.swift in Sources */,
+				CE398E192A2606AF001B76B1 /* TradeHistroryController.swift in Sources */,
+				CE398E132A2605BD001B76B1 /* MainTabContoller.swift in Sources */,
 				CE398DDE2A26051D001B76B1 /* SceneDelegate.swift in Sources */,
 				CE398DE62A26051D001B76B1 /* BinanceTradeHistrory.xcdatamodeld in Sources */,
 			);
@@ -446,7 +522,6 @@
 				INFOPLIST_FILE = BinanceTradeHistrory/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -474,7 +549,6 @@
 				INFOPLIST_FILE = BinanceTradeHistrory/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
