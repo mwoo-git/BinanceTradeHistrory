@@ -53,9 +53,6 @@ class BinanceWebSocketService: NSObject {
                     if let data = text.data(using: .utf8) {
                         self.onReceiveData(data)
                     }
-                case .data(let data):
-//                    print("Received binary message: \(data)")
-                    self.onReceiveData(data)
                 default: break
                 }
                 self.receive()
@@ -71,7 +68,10 @@ class BinanceWebSocketService: NSObject {
             guard let ticker = try? JSONDecoder().decode(BinanceTicker.self, from: data) else {
                 return print("BinanceTicker 객체 생성 에러")
             }
-            print("\(ticker.timestamp), \(ticker.decimalPrice), \(ticker.decimalQuantity), \(ticker.tradeAmount)")
+            
+            let amount = (Decimal(string: ticker.price) ?? 0) * (Decimal(string: ticker.quantity) ?? 0)
+            guard amount > 100000 else { return }
+            print(ticker)
             self.tickerSubject.send(ticker)
         }
     }

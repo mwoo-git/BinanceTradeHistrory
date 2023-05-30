@@ -10,21 +10,22 @@ import UIKit
 class TradeHistoryCell: UITableViewCell {
     // MARK: - Properties
     
+    var vm: TradeHistoryCellViewModel? {
+        didSet { configure() }
+    }
+    
     private let timeLabel: UILabel = {
         let label = UILabel()
-        label.text = "19:51:34"
         return label
     }()
     
     private let priceLabel: UILabel = {
         let label = UILabel()
-        label.text = "37,316,000"
         return label
     }()
     
     private let amountLabel: UILabel = {
         let label = UILabel()
-        label.text = "100,000"
         label.textAlignment = .right
         return label
     }()
@@ -54,6 +55,11 @@ class TradeHistoryCell: UITableViewCell {
     
     // MARK: - Helpers
     
-    func configure(with label: String) {
+    func configure() {
+        guard let vm = vm else { return }
+        timeLabel.text = vm.time
+        priceLabel.text = vm.price
+        amountLabel.text = vm.amount
+        amountLabel.textColor = vm.ticker.trade ? .systemRed : .systemGreen
     }
 }

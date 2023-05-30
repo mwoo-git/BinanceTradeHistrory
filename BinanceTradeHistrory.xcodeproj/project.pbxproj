@@ -24,6 +24,7 @@
 		CE398E252A260C81001B76B1 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE398E242A260C81001B76B1 /* UIView.swift */; };
 		CE9E48432A26176100CA4E81 /* BinanceWebSocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E48422A26176100CA4E81 /* BinanceWebSocketService.swift */; };
 		CE9E48452A26179B00CA4E81 /* BinanceTicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E48442A26179B00CA4E81 /* BinanceTicker.swift */; };
+		CEC07EFD2A265E84001F6B01 /* TradeHistoryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC07EFC2A265E84001F6B01 /* TradeHistoryCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		CE398E242A260C81001B76B1 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		CE9E48422A26176100CA4E81 /* BinanceWebSocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinanceWebSocketService.swift; sourceTree = "<group>"; };
 		CE9E48442A26179B00CA4E81 /* BinanceTicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinanceTicker.swift; sourceTree = "<group>"; };
+		CEC07EFC2A265E84001F6B01 /* TradeHistoryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeHistoryCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 		CE398E162A26065A001B76B1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				CEC07EFC2A265E84001F6B01 /* TradeHistoryCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				CE398E192A2606AF001B76B1 /* TradeHistroryController.swift in Sources */,
 				CE398E132A2605BD001B76B1 /* MainTabContoller.swift in Sources */,
 				CE9E48452A26179B00CA4E81 /* BinanceTicker.swift in Sources */,
+				CEC07EFD2A265E84001F6B01 /* TradeHistoryCellViewModel.swift in Sources */,
 				CE398DDE2A26051D001B76B1 /* SceneDelegate.swift in Sources */,
 				CE9E48432A26176100CA4E81 /* BinanceWebSocketService.swift in Sources */,
 				CE398DE62A26051D001B76B1 /* BinanceTradeHistrory.xcdatamodeld in Sources */,
