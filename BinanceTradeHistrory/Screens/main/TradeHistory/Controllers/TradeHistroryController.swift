@@ -37,6 +37,10 @@ class TradeHistoryController: UITableViewController {
         navigationItem.title = "바이낸스 미니 체결"
         view.backgroundColor = .systemBackground
         
+        tableView.separatorStyle = .singleLine
+        tableView.separatorInset = .zero
+        tableView.layoutMargins = .zero
+        
         tableView.register(TradeHistoryCell.self, forCellReuseIdentifier: cellIdentifier)
         tableView.rowHeight = 50
     }
