@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AE71D9B35BA5504BBBE7F89 /* Pods_BinanceTradeHistrory_BinanceTradeHistroryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5D670417DB16FDEEF835E0 /* Pods_BinanceTradeHistrory_BinanceTradeHistroryUITests.framework */; };
+		765C101C0E2DD6798AD0317C /* Pods_BinanceTradeHistroryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C1DDD9240215447E07215E4 /* Pods_BinanceTradeHistroryTests.framework */; };
 		CE398DDC2A26051D001B76B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE398DDB2A26051D001B76B1 /* AppDelegate.swift */; };
 		CE398DDE2A26051D001B76B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE398DDD2A26051D001B76B1 /* SceneDelegate.swift */; };
 		CE398DE02A26051D001B76B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE398DDF2A26051D001B76B1 /* ViewController.swift */; };
@@ -22,9 +24,15 @@
 		CE398E1D2A2609F3001B76B1 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = CE398E1C2A2609F3001B76B1 /* .gitignore */; };
 		CE398E222A260A8C001B76B1 /* TradeHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE398E212A260A8C001B76B1 /* TradeHistoryCell.swift */; };
 		CE398E252A260C81001B76B1 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE398E242A260C81001B76B1 /* UIView.swift */; };
+		CE3F3CCA2A2DC8C600E8888D /* CoinListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F3CC92A2DC8C600E8888D /* CoinListController.swift */; };
+		CE3F3CCC2A2DC9E500E8888D /* CoinListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F3CCB2A2DC9E500E8888D /* CoinListViewModel.swift */; };
+		CE3F3CCE2A2DCA4A00E8888D /* TickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F3CCD2A2DCA4A00E8888D /* TickerViewModel.swift */; };
+		CE3F3CD02A2DCBFF00E8888D /* BinanceRestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3F3CCF2A2DCBFF00E8888D /* BinanceRestService.swift */; };
+		CE5A298D2A2DDD3800F85779 /* TickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5A298C2A2DDD3800F85779 /* TickerCell.swift */; };
 		CE9E48432A26176100CA4E81 /* BinanceWebSocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E48422A26176100CA4E81 /* BinanceWebSocketService.swift */; };
-		CE9E48452A26179B00CA4E81 /* BinanceTicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E48442A26179B00CA4E81 /* BinanceTicker.swift */; };
+		CE9E48452A26179B00CA4E81 /* Binance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E48442A26179B00CA4E81 /* Binance.swift */; };
 		CEC07EFD2A265E84001F6B01 /* TradeHistoryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC07EFC2A265E84001F6B01 /* TradeHistoryCellViewModel.swift */; };
+		E9606120F69001694F75771A /* Pods_BinanceTradeHistrory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48BD6A6E6C8A831731D3E4C3 /* Pods_BinanceTradeHistrory.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +53,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AF1B73A67C525C1EF73450D /* Pods-BinanceTradeHistroryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinanceTradeHistroryTests.release.xcconfig"; path = "Target Support Files/Pods-BinanceTradeHistroryTests/Pods-BinanceTradeHistroryTests.release.xcconfig"; sourceTree = "<group>"; };
+		213291D053B531E386EF6455 /* Pods-BinanceTradeHistrory-BinanceTradeHistroryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinanceTradeHistrory-BinanceTradeHistroryUITests.debug.xcconfig"; path = "Target Support Files/Pods-BinanceTradeHistrory-BinanceTradeHistroryUITests/Pods-BinanceTradeHistrory-BinanceTradeHistroryUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		300344E5CC077FB38F7B2957 /* Pods-BinanceTradeHistroryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinanceTradeHistroryTests.debug.xcconfig"; path = "Target Support Files/Pods-BinanceTradeHistroryTests/Pods-BinanceTradeHistroryTests.debug.xcconfig"; sourceTree = "<group>"; };
+		48BD6A6E6C8A831731D3E4C3 /* Pods_BinanceTradeHistrory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BinanceTradeHistrory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C1DDD9240215447E07215E4 /* Pods_BinanceTradeHistroryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BinanceTradeHistroryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E170BA94DD00A4E45D7AF85 /* Pods-BinanceTradeHistrory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinanceTradeHistrory.release.xcconfig"; path = "Target Support Files/Pods-BinanceTradeHistrory/Pods-BinanceTradeHistrory.release.xcconfig"; sourceTree = "<group>"; };
+		C8453A2F51A978DB3D99DA02 /* Pods-BinanceTradeHistrory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinanceTradeHistrory.debug.xcconfig"; path = "Target Support Files/Pods-BinanceTradeHistrory/Pods-BinanceTradeHistrory.debug.xcconfig"; sourceTree = "<group>"; };
 		CE398DD82A26051D001B76B1 /* BinanceTradeHistrory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BinanceTradeHistrory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE398DDB2A26051D001B76B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE398DDD2A26051D001B76B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,9 +79,16 @@
 		CE398E1C2A2609F3001B76B1 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		CE398E212A260A8C001B76B1 /* TradeHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeHistoryCell.swift; sourceTree = "<group>"; };
 		CE398E242A260C81001B76B1 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		CE3F3CC92A2DC8C600E8888D /* CoinListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListController.swift; sourceTree = "<group>"; };
+		CE3F3CCB2A2DC9E500E8888D /* CoinListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListViewModel.swift; sourceTree = "<group>"; };
+		CE3F3CCD2A2DCA4A00E8888D /* TickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerViewModel.swift; sourceTree = "<group>"; };
+		CE3F3CCF2A2DCBFF00E8888D /* BinanceRestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinanceRestService.swift; sourceTree = "<group>"; };
+		CE5A298C2A2DDD3800F85779 /* TickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerCell.swift; sourceTree = "<group>"; };
 		CE9E48422A26176100CA4E81 /* BinanceWebSocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinanceWebSocketService.swift; sourceTree = "<group>"; };
-		CE9E48442A26179B00CA4E81 /* BinanceTicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinanceTicker.swift; sourceTree = "<group>"; };
+		CE9E48442A26179B00CA4E81 /* Binance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binance.swift; sourceTree = "<group>"; };
 		CEC07EFC2A265E84001F6B01 /* TradeHistoryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeHistoryCellViewModel.swift; sourceTree = "<group>"; };
+		FB5D670417DB16FDEEF835E0 /* Pods_BinanceTradeHistrory_BinanceTradeHistroryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BinanceTradeHistrory_BinanceTradeHistroryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC5ADA725D5ED7DD78C7421B /* Pods-BinanceTradeHistrory-BinanceTradeHistroryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinanceTradeHistrory-BinanceTradeHistroryUITests.release.xcconfig"; path = "Target Support Files/Pods-BinanceTradeHistrory-BinanceTradeHistroryUITests/Pods-BinanceTradeHistrory-BinanceTradeHistroryUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9606120F69001694F75771A /* Pods_BinanceTradeHistrory.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				765C101C0E2DD6798AD0317C /* Pods_BinanceTradeHistroryTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,12 +112,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AE71D9B35BA5504BBBE7F89 /* Pods_BinanceTradeHistrory_BinanceTradeHistroryUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		016B0A3D47ADE82D74575A1D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48BD6A6E6C8A831731D3E4C3 /* Pods_BinanceTradeHistrory.framework */,
+				FB5D670417DB16FDEEF835E0 /* Pods_BinanceTradeHistrory_BinanceTradeHistroryUITests.framework */,
+				4C1DDD9240215447E07215E4 /* Pods_BinanceTradeHistroryTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		33945F8051257249377FC989 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8453A2F51A978DB3D99DA02 /* Pods-BinanceTradeHistrory.debug.xcconfig */,
+				9E170BA94DD00A4E45D7AF85 /* Pods-BinanceTradeHistrory.release.xcconfig */,
+				213291D053B531E386EF6455 /* Pods-BinanceTradeHistrory-BinanceTradeHistroryUITests.debug.xcconfig */,
+				FC5ADA725D5ED7DD78C7421B /* Pods-BinanceTradeHistrory-BinanceTradeHistroryUITests.release.xcconfig */,
+				300344E5CC077FB38F7B2957 /* Pods-BinanceTradeHistroryTests.debug.xcconfig */,
+				0AF1B73A67C525C1EF73450D /* Pods-BinanceTradeHistroryTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CE398DCF2A26051D001B76B1 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +150,8 @@
 				CE398DF42A260520001B76B1 /* BinanceTradeHistroryTests */,
 				CE398DFE2A260520001B76B1 /* BinanceTradeHistroryUITests */,
 				CE398DD92A26051D001B76B1 /* Products */,
+				33945F8051257249377FC989 /* Pods */,
+				016B0A3D47ADE82D74575A1D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,6 +212,8 @@
 		CE398E0F2A26054F001B76B1 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				CE3F3CC52A2DC88C00E8888D /* CoinList */,
+				CE398E142A260642001B76B1 /* TradeHistory */,
 				CE398E102A260559001B76B1 /* main */,
 			);
 			path = Screens;
@@ -170,7 +222,6 @@
 		CE398E102A260559001B76B1 /* main */ = {
 			isa = PBXGroup;
 			children = (
-				CE398E142A260642001B76B1 /* TradeHistory */,
 				CE398E112A260563001B76B1 /* Controllers */,
 			);
 			path = main;
@@ -213,7 +264,7 @@
 		CE398E172A260662001B76B1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CE9E48442A26179B00CA4E81 /* BinanceTicker.swift */,
+				CE9E48442A26179B00CA4E81 /* Binance.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -234,10 +285,46 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		CE3F3CC52A2DC88C00E8888D /* CoinList */ = {
+			isa = PBXGroup;
+			children = (
+				CE3F3CC82A2DC8B400E8888D /* Components */,
+				CE3F3CC72A2DC8AC00E8888D /* Controllers */,
+				CE3F3CC62A2DC89D00E8888D /* ViewModels */,
+			);
+			path = CoinList;
+			sourceTree = "<group>";
+		};
+		CE3F3CC62A2DC89D00E8888D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CE3F3CCB2A2DC9E500E8888D /* CoinListViewModel.swift */,
+				CE3F3CCD2A2DCA4A00E8888D /* TickerViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CE3F3CC72A2DC8AC00E8888D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE3F3CC92A2DC8C600E8888D /* CoinListController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CE3F3CC82A2DC8B400E8888D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CE5A298C2A2DDD3800F85779 /* TickerCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		CE9E48412A26174200CA4E81 /* API */ = {
 			isa = PBXGroup;
 			children = (
 				CE9E48422A26176100CA4E81 /* BinanceWebSocketService.swift */,
+				CE3F3CCF2A2DCBFF00E8888D /* BinanceRestService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -249,9 +336,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE398E052A260520001B76B1 /* Build configuration list for PBXNativeTarget "BinanceTradeHistrory" */;
 			buildPhases = (
+				EEFA19675A34154394E2BD84 /* [CP] Check Pods Manifest.lock */,
 				CE398DD42A26051D001B76B1 /* Sources */,
 				CE398DD52A26051D001B76B1 /* Frameworks */,
 				CE398DD62A26051D001B76B1 /* Resources */,
+				A48960D117317FCF6901CA54 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -266,6 +355,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE398E082A260520001B76B1 /* Build configuration list for PBXNativeTarget "BinanceTradeHistroryTests" */;
 			buildPhases = (
+				E2BB0ADCAAC331598EB8D9D7 /* [CP] Check Pods Manifest.lock */,
 				CE398DED2A260520001B76B1 /* Sources */,
 				CE398DEE2A260520001B76B1 /* Frameworks */,
 				CE398DEF2A260520001B76B1 /* Resources */,
@@ -284,9 +374,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE398E0B2A260520001B76B1 /* Build configuration list for PBXNativeTarget "BinanceTradeHistroryUITests" */;
 			buildPhases = (
+				075CC88610712A32CB839708 /* [CP] Check Pods Manifest.lock */,
 				CE398DF72A260520001B76B1 /* Sources */,
 				CE398DF82A260520001B76B1 /* Frameworks */,
 				CE398DF92A260520001B76B1 /* Resources */,
+				3C7FFF2E21A1790F4AA5BD32 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -369,20 +461,128 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		075CC88610712A32CB839708 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BinanceTradeHistrory-BinanceTradeHistroryUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C7FFF2E21A1790F4AA5BD32 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BinanceTradeHistrory-BinanceTradeHistroryUITests/Pods-BinanceTradeHistrory-BinanceTradeHistroryUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BinanceTradeHistrory-BinanceTradeHistroryUITests/Pods-BinanceTradeHistrory-BinanceTradeHistroryUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BinanceTradeHistrory-BinanceTradeHistroryUITests/Pods-BinanceTradeHistrory-BinanceTradeHistroryUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A48960D117317FCF6901CA54 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BinanceTradeHistrory/Pods-BinanceTradeHistrory-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BinanceTradeHistrory/Pods-BinanceTradeHistrory-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BinanceTradeHistrory/Pods-BinanceTradeHistrory-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2BB0ADCAAC331598EB8D9D7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BinanceTradeHistroryTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEFA19675A34154394E2BD84 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BinanceTradeHistrory-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE398DD42A26051D001B76B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CE398E252A260C81001B76B1 /* UIView.swift in Sources */,
+				CE3F3CCC2A2DC9E500E8888D /* CoinListViewModel.swift in Sources */,
 				CE398DE02A26051D001B76B1 /* ViewController.swift in Sources */,
 				CE398E222A260A8C001B76B1 /* TradeHistoryCell.swift in Sources */,
 				CE398DDC2A26051D001B76B1 /* AppDelegate.swift in Sources */,
+				CE3F3CCE2A2DCA4A00E8888D /* TickerViewModel.swift in Sources */,
 				CE398E192A2606AF001B76B1 /* TradeHistroryController.swift in Sources */,
 				CE398E132A2605BD001B76B1 /* MainTabContoller.swift in Sources */,
-				CE9E48452A26179B00CA4E81 /* BinanceTicker.swift in Sources */,
+				CE9E48452A26179B00CA4E81 /* Binance.swift in Sources */,
 				CEC07EFD2A265E84001F6B01 /* TradeHistoryCellViewModel.swift in Sources */,
+				CE3F3CD02A2DCBFF00E8888D /* BinanceRestService.swift in Sources */,
+				CE3F3CCA2A2DC8C600E8888D /* CoinListController.swift in Sources */,
 				CE398DDE2A26051D001B76B1 /* SceneDelegate.swift in Sources */,
+				CE5A298D2A2DDD3800F85779 /* TickerCell.swift in Sources */,
 				CE9E48432A26176100CA4E81 /* BinanceWebSocketService.swift in Sources */,
 				CE398DE62A26051D001B76B1 /* BinanceTradeHistrory.xcdatamodeld in Sources */,
 			);
@@ -556,6 +756,7 @@
 		};
 		CE398E062A260520001B76B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8453A2F51A978DB3D99DA02 /* Pods-BinanceTradeHistrory.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -583,6 +784,7 @@
 		};
 		CE398E072A260520001B76B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E170BA94DD00A4E45D7AF85 /* Pods-BinanceTradeHistrory.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -610,6 +812,7 @@
 		};
 		CE398E092A260520001B76B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 300344E5CC077FB38F7B2957 /* Pods-BinanceTradeHistroryTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -630,6 +833,7 @@
 		};
 		CE398E0A2A260520001B76B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AF1B73A67C525C1EF73450D /* Pods-BinanceTradeHistroryTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -650,6 +854,7 @@
 		};
 		CE398E0C2A260520001B76B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 213291D053B531E386EF6455 /* Pods-BinanceTradeHistrory-BinanceTradeHistroryUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -668,6 +873,7 @@
 		};
 		CE398E0D2A260520001B76B1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC5ADA725D5ED7DD78C7421B /* Pods-BinanceTradeHistrory-BinanceTradeHistroryUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

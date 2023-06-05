@@ -16,8 +16,8 @@ class BinanceWebSocketService: NSObject {
     
     @Published var isConnected = false
     
-    let tickerSubject = CurrentValueSubject<BinanceTicker?, Never>(nil)
-    var ticker: BinanceTicker? { tickerSubject.value }
+    let tickerSubject = CurrentValueSubject<BinanceTradeTicker?, Never>(nil)
+    var ticker: BinanceTradeTicker? { tickerSubject.value }
     
     private var webSocket: URLSessionWebSocketTask?
     
@@ -29,7 +29,7 @@ class BinanceWebSocketService: NSObject {
     }
     
     func send() {
-        let symbol = "BTCUSDT"
+        let symbol = "INJUSDT"
         let stream = "\(symbol.lowercased())@aggTrade"
         let message = """
         {"method": "SUBSCRIBE", "params": ["\(stream)"], "id": 1}
@@ -65,12 +65,12 @@ class BinanceWebSocketService: NSObject {
     
     private func onReceiveData(_ data: Data) {
         DispatchQueue.global(qos: .background).async {
-            guard let ticker = try? JSONDecoder().decode(BinanceTicker.self, from: data) else {
+            guard let ticker = try? JSONDecoder().decode(BinanceTradeTicker.self, from: data) else {
                 return print("BinanceTicker 객체 생성 에러")
             }
             
             let amount = (Decimal(string: ticker.price) ?? 0) * (Decimal(string: ticker.quantity) ?? 0)
-            guard amount > 100000 else { return }
+            guard amount > 10000 else { return }
             print(ticker)
             self.tickerSubject.send(ticker)
         }

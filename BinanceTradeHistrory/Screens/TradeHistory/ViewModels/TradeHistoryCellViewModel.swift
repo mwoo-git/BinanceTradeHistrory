@@ -8,7 +8,7 @@
 import Foundation
 
 struct TradeHistoryCellViewModel {
-    let ticker: BinanceTicker
+    let ticker: BinanceTradeTicker
     
     var time: String {
         let utcTimestamp = ticker.tradeTime / 1000

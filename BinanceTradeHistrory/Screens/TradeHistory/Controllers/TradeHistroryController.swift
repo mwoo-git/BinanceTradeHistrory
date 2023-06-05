@@ -14,7 +14,7 @@ class TradeHistoryController: UITableViewController {
     // MARK: - Properties
     private var subscriptions = Set<AnyCancellable>()
     
-    private var historyList = [BinanceTicker]() {
+    private var historyList = [BinanceTradeTicker]() {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
