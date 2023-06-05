@@ -51,7 +51,7 @@ class CoinListController: UICollectionViewController {
     
     func configureUI() {
         navigationItem.title = "거래소"
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         
         collectionView.register(TickerCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         collectionView.keyboardDismissMode = .onDrag

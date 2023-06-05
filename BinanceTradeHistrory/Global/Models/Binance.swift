@@ -29,7 +29,7 @@ struct BinanceTradeTicker: Codable {
     }
 }
 
-// MARK: - Rest_fetchCoin
+// MARK: - fetchCoins
 
 struct BinanceExchangeInfo: Codable {
     let symbols: [BinanceCoin]
@@ -46,38 +46,53 @@ struct BinanceCoin: Codable {
 
 struct BinanceTicker: Decodable {
     let market: String
-    let candle: BinanceCandlestick
+    let kline: BinanceKline
+    
+    var changeRate: Double {
+        guard let openPrice = Double(kline.open),
+              let closePrice = Double(kline.close) else { return 0 }
+        
+        return ((closePrice - openPrice) / openPrice) * 100
+    }
+    
+    var volume: Double {
+        guard let closePrice = Double(kline.close),
+              let volume = Double(kline.volume) else { return 0 }
+        
+        return closePrice * volume
+    }
 }
 
-// MARK: - CandleStick
+// MARK: - Kline
 
-struct BinanceCandlestick: Decodable {
-    let openTime: TimeInterval
-    let openPrice: String
-    let highPrice: String
-    let lowPrice: String
-    let closePrice: String
+struct BinanceKline: Codable {
+    let openTime: Int
+    let open: String
+    let high: String
+    let low: String
+    let close: String
     let volume: String
-    let closeTime: TimeInterval
-    let quoteAssetVolume: String
+    let closeTime: Int
+    let quoteVolume: String
     let trades: Int
-    let takerBuyBaseAssetVolume: String
-    let takerBuyQuoteAssetVolume: String
+    let buyAssetVolume: String
+    let buyQuoteVolume: String
     let ignored: String
     
-    enum CodingKeys: String, CodingKey {
-        case openTime = "0"
-        case openPrice = "1"
-        case highPrice = "2"
-        case lowPrice = "3"
-        case closePrice = "4"
-        case volume = "5"
-        case closeTime = "6"
-        case quoteAssetVolume = "7"
-        case trades = "8"
-        case takerBuyBaseAssetVolume = "9"
-        case takerBuyQuoteAssetVolume = "10"
-        case ignored = "11"
+    init(from decoder: Decoder) throws {
+        var values = try decoder.unkeyedContainer()
+        self.openTime = try values.decode(Int.self)
+        self.open = try values.decode(String.self)
+        self.high = try values.decode(String.self)
+        self.low = try values.decode(String.self)
+        self.close = try values.decode(String.self)
+        self.volume = try values.decode(String.self)
+        self.closeTime = try values.decode(Int.self)
+        self.quoteVolume = try values.decode(String.self)
+        self.trades = try values.decode(Int.self)
+        self.buyAssetVolume = try values.decode(String.self)
+        self.buyQuoteVolume = try values.decode(String.self)
+        self.ignored = try values.decode(String.self)
     }
 }
 

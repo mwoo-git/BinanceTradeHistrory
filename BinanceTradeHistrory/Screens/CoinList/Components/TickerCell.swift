@@ -29,7 +29,6 @@ class TickerCell: UICollectionViewCell {
     private let priceLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 15)
-        label.textColor = .black
         return label
     }()
     
@@ -54,7 +53,7 @@ class TickerCell: UICollectionViewCell {
     // MARK: - Configures
     
     func configureUI() {
-        backgroundColor = .white
+        backgroundColor = .systemBackground
         
         addSubview(nameLabel)
         nameLabel.anchor(top: topAnchor, left: leftAnchor, paddingTop: 10, paddingLeft: 20)

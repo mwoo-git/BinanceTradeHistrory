@@ -59,7 +59,7 @@ class CoinListViewModel {
     func fetchTickers() {
         Task {
             do {
-                guard let coins = coins else { return fetchCoins() }
+                guard let coins = self.coins else { return fetchCoins() }
                 let tickers = try await BinanceRestService.fetchTickers(withCoins: coins)
                 self.tickers = tickers
             } catch {
@@ -87,11 +87,11 @@ class CoinListViewModel {
         guard let tickers = tickers else { return [] }
         switch sort {
         case .rise:
-            return tickers.sorted(by: { $0.signedChangeRate > $1.signedChangeRate })
+            return tickers.sorted(by: { $0.changeRate > $1.changeRate })
         case .fall:
-            return tickers.sorted(by: { $0.signedChangeRate < $1.signedChangeRate })
+            return tickers.sorted(by: { $0.changeRate < $1.changeRate })
         case .volume:
-            return tickers.sorted(by: { $0.accTradePrice24H > $1.accTradePrice24H })
+            return tickers.sorted(by: { $0.volume > $1.volume })
         }
     }
     
