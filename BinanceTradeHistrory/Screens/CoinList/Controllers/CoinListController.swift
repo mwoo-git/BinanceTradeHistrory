@@ -5,8 +5,6 @@
 //  Created by Mac on 2023/06/05.
 //
 
-import Foundation
-
 import UIKit
 import RxSwift
 
@@ -17,14 +15,15 @@ class CoinListController: UITableViewController {
     // MARK: Properties
     
     private var vm = CoinListViewModel()
-    
     private let disposeBag = DisposeBag()
-    
     private let searchController = UISearchController(searchResultsController: nil)
-    
     private var inSearchMode: Bool {
         return searchController.isActive && !searchController.searchBar.text!.isEmpty
     }
+    
+    private var countdownButton: UIBarButtonItem!
+    private var countdownTimer: Timer?
+    private var countdownValue: Int = 59
     
     // MARK: Lifecycle
     
@@ -32,9 +31,17 @@ class CoinListController: UITableViewController {
         super.viewDidLoad()
         
         configureSortMenu()
-        configureSerachController()
+        configureSearchController()
         configureUI()
         bind()
+        configureCountdownButton()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // 타이머가 실행 중인 경우, 뷰가 사라질 때 타이머를 정지합니다.
+        stopCountdownTimer()
     }
     
     // MARK: - API
@@ -60,9 +67,7 @@ class CoinListController: UITableViewController {
         tableView.rowHeight = 70
     }
     
-    // MARK: - Helpers
-    
-    func configureSerachController() {
+    func configureSearchController() {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.hidesNavigationBarDuringPresentation = false
@@ -97,12 +102,61 @@ class CoinListController: UITableViewController {
         navigationItem.leftBarButtonItem?.tintColor = .systemBlue
     }
     
+    func configureCountdownButton() {
+        countdownButton = UIBarButtonItem(title: "조회", style: .plain, target: self, action: #selector(countdownButtonTapped))
+        navigationItem.rightBarButtonItem = countdownButton
+    }
+    
     // MARK: - Actions
-}
-
-// MARK: - TableViewDataSource
-
-extension CoinListController {
+    
+    @objc func countdownButtonTapped() {
+        vm.fetchTickers()
+        countdownValue = 15
+        if countdownTimer == nil {
+            startCountdownTimer()
+        } else {
+            stopCountdownTimer()
+        }
+    }
+    
+    // MARK: - Timer
+    
+    func startCountdownTimer() {
+        /// 카운트 다운이 시작되면 버튼 타이틀을 변경하고, 1초마다 카운트 다운을 감소시키는 타이머를 시작합니다.
+        countdownButton.title = "\(countdownValue)"
+        countdownButton.isEnabled = false
+        countdownButton.tintColor = .systemGray
+        countdownTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
+            self?.updateCountdown()
+        }
+        
+        /// 타이머를 백그라운드 큐에서 실행
+        if let timer = countdownTimer {
+            RunLoop.current.add(timer, forMode: .common)
+        }
+    }
+    
+    func stopCountdownTimer() {
+        /// 카운트 다운을 정지하고, 버튼 타이틀을 "조회"로 변경합니다.
+        countdownTimer?.invalidate()
+        countdownTimer = nil
+        countdownButton.title = "조회"
+        countdownButton.isEnabled = true
+        countdownButton.tintColor = .systemBlue
+    }
+    
+    @objc func updateCountdown() {
+        /// 카운트 다운을 1초씩 감소시키고, 0이 되면 카운트 다운을 종료합니다.
+        countdownValue -= 1
+        countdownButton.title = "\(countdownValue)"
+        
+        if countdownValue == 0 {
+            stopCountdownTimer()
+        }
+    }
+    
+    // MARK: - UITableViewDataSource
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return inSearchMode ? vm.filterd.value.count : vm.coinlist.value.count
     }
@@ -116,11 +170,9 @@ extension CoinListController {
         
         return cell
     }
-}
-
-// MARK: - UITableViewDelegate
-
-extension CoinListController {
+    
+    // MARK: - UITableViewDelegate
+    
     override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         guard !inSearchMode else { return }
         searchController.dismiss(animated: false)
@@ -129,7 +181,6 @@ extension CoinListController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     }
 }
-
 
 // MARK: - UISearchResultsUpdating
 
@@ -142,3 +193,4 @@ extension CoinListController: UISearchResultsUpdating {
         self.tableView.reloadData()
     }
 }
+
