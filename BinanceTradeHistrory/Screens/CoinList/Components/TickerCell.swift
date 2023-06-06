@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TickerCell: UICollectionViewCell {
+class TickerCell: UITableViewCell {
     // MARK: - Properties
     
     private var vm: TickerViewModel? {
@@ -16,32 +16,33 @@ class TickerCell: UICollectionViewCell {
     
     private let nameLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 15)
+        label.font = UIFont.boldSystemFont(ofSize: 16)
         return label
     }()
     
-    private let symbolLabel: UILabel = {
+    private let volumeLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 15)
-        return label
-    }()
-    
-    private let priceLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 15)
+        label.font = UIFont.systemFont(ofSize: 16)
+        label.textColor = .lightGray
         return label
     }()
     
     private let changeRateLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 15)
+        label.font = UIFont.systemFont(ofSize: 16)
+        return label
+    }()
+    
+    private let priceLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 16)
         return label
     }()
     
     // MARK: - Lifecycles
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         configureUI()
     }
@@ -58,14 +59,14 @@ class TickerCell: UICollectionViewCell {
         addSubview(nameLabel)
         nameLabel.anchor(top: topAnchor, left: leftAnchor, paddingTop: 10, paddingLeft: 20)
         
-        addSubview(symbolLabel)
-        symbolLabel.anchor(top: nameLabel.bottomAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 20)
-        
-        addSubview(changeRateLabel)
-        changeRateLabel.anchor(top: topAnchor, right: rightAnchor, paddingTop: 10, paddingRight: 20)
+        addSubview(volumeLabel)
+        volumeLabel.anchor(top: nameLabel.bottomAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 20)
         
         addSubview(priceLabel)
-        priceLabel.anchor(top: changeRateLabel.bottomAnchor, right: rightAnchor, paddingTop: 8, paddingRight: 20)
+        priceLabel.anchor(top: topAnchor, right: rightAnchor, paddingTop: 10, paddingRight: 20)
+        
+        addSubview(changeRateLabel)
+        changeRateLabel.anchor(top: priceLabel.bottomAnchor, right: rightAnchor, paddingTop: 8, paddingRight: 20)
     }
     
     // MARK: - Helpers
@@ -78,8 +79,9 @@ class TickerCell: UICollectionViewCell {
         guard let vm = vm else { return }
         
         nameLabel.text = vm.symbol
-        symbolLabel.text = vm.symbol
+        volumeLabel.text = "Vol \(vm.volume) USDT"
+        changeRateLabel.text = vm.ticker.changeRate > 0 ? "+\(vm.changeRate)" : vm.changeRate
+        changeRateLabel.textColor = vm.ticker.changeRate > 0 ? .systemGreen : .systemRed
         priceLabel.text = vm.price
-        changeRateLabel.text = vm.changeRate
     }
 }

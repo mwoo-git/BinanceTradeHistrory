@@ -12,7 +12,7 @@ import RxSwift
 
 private let reuseIdentifier = "CoinCell"
 
-class CoinListController: UICollectionViewController {
+class CoinListController: UITableViewController {
     
     // MARK: Properties
     
@@ -42,7 +42,7 @@ class CoinListController: UICollectionViewController {
     func bind() {
         vm.coinlist
             .subscribe(onNext: { [weak self] _ in
-                self?.collectionView.reloadData()
+                self?.tableView.reloadData()
             })
             .disposed(by: disposeBag)
     }
@@ -50,14 +50,14 @@ class CoinListController: UICollectionViewController {
     // MARK: - Configures
     
     func configureUI() {
-        navigationItem.title = "거래소"
+        navigationItem.title = "바이낸스 선물"
+        navigationController?.navigationBar.prefersLargeTitles = true
         view.backgroundColor = .systemBackground
         
-        collectionView.register(TickerCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        collectionView.keyboardDismissMode = .onDrag
+        tableView.register(TickerCell.self, forCellReuseIdentifier: reuseIdentifier)
+        tableView.keyboardDismissMode = .onDrag
         
-        view.addSubview(collectionView)
-        collectionView.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
+        tableView.rowHeight = 70
     }
     
     // MARK: - Helpers
@@ -100,15 +100,15 @@ class CoinListController: UICollectionViewController {
     // MARK: - Actions
 }
 
-// MARK: - UICollectionViewDataSource
+// MARK: - TableViewDataSource
 
 extension CoinListController {
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return inSearchMode ? vm.filterd.value.count : vm.coinlist.value.count
     }
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! TickerCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! TickerCell
         
         let coin = inSearchMode ? vm.filterd.value[indexPath.row] : vm.coinlist.value[indexPath.row]
         
@@ -118,7 +118,7 @@ extension CoinListController {
     }
 }
 
-// MARK: - UICollectionViewDelegate
+// MARK: - UITableViewDelegate
 
 extension CoinListController {
     override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
@@ -130,17 +130,6 @@ extension CoinListController {
     }
 }
 
-// MARK: - UICollectionViewDelegateFlowLayout
-
-extension CoinListController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 60)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: view.frame.width, height: 0)
-    }
-}
 
 // MARK: - UISearchResultsUpdating
 
@@ -150,6 +139,6 @@ extension CoinListController: UISearchResultsUpdating {
         let coins = vm.coinlist.value.filter({ $0.symbol.lowercased().contains(searchText) })
         vm.filterd.accept(coins)
         
-        self.collectionView.reloadData()
+        self.tableView.reloadData()
     }
 }

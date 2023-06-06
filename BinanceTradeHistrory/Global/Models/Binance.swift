@@ -56,10 +56,9 @@ struct BinanceTicker: Decodable {
     }
     
     var volume: Double {
-        guard let closePrice = Double(kline.close),
-              let volume = Double(kline.volume) else { return 0 }
+        guard let volume = Double(kline.quoteVolume) else { return 0 }
         
-        return closePrice * volume
+        return volume
     }
 }
 
@@ -96,6 +95,48 @@ struct BinanceKline: Codable {
     }
 }
 
+// MARK: - Futures
 
+struct BinanceFuturesExchangeInfo: Codable {
+    let timezone: String
+    let serverTime: Int64
+    let rateLimits: [BinanceRateLimit]
+    let symbols: [BinanceFuturesSymbol]
+}
 
+struct BinanceFuturesSymbol: Codable {
+    let symbol: String
+    let pair: String
+    let contractType: String
+    let deliveryDate: Int64
+    let onboardDate: Int64
+    let status: String
+    let baseAsset: String
+    let baseAssetPrecision: Int
+    let quoteAsset: String
+    let quotePrecision: Int
+    let filters: [BinanceFuturesSymbolFilter]
+    let orderTypes: [String]
+    let timeInForce: [String]
+}
+
+struct BinanceFuturesSymbolFilter: Codable {
+    let filterType: String
+    let minPrice: String?
+    let maxPrice: String?
+    let tickSize: String?
+    let minQuantity: String?
+    let maxQuantity: String?
+    let stepSize: String?
+    let maxNumOrders: Int?
+    let maxNumAlgoOrders: Int?
+    let limit: Int?
+}
+
+struct BinanceRateLimit: Codable {
+    let rateLimitType: String
+    let interval: String
+    let intervalNum: Int
+    let limit: Int
+}
 

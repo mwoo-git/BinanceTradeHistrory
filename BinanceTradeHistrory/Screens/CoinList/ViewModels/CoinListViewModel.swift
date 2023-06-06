@@ -48,7 +48,7 @@ class CoinListViewModel {
     func fetchCoins() {
         Task {
             do {
-                let coins = try await BinanceRestService.fetchCoins()
+                let coins = try await BinanceRestService.fetchFuturesCoins()
                 self.coins = coins
             } catch {
                 print("DEBUG: fetchCoins() Failed.")
@@ -60,7 +60,7 @@ class CoinListViewModel {
         Task {
             do {
                 guard let coins = self.coins else { return fetchCoins() }
-                let tickers = try await BinanceRestService.fetchTickers(withCoins: coins)
+                let tickers = try await BinanceRestService.fetchTickers(withCoins: coins, type: .futures)
                 self.tickers = tickers
             } catch {
                 print("DEBUG: fetchTickers() Failed.")

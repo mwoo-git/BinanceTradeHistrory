@@ -8,22 +8,36 @@
 import Foundation
 
 struct TickerViewModel {
-    private let ticker: BinanceTicker
+    let ticker: BinanceTicker
     
     var market: String {
         return ticker.market
     }
     
     var price: String {
-        return ticker.market
+        return ticker.kline.close
     }
     
     var changeRate: String {
-        return ticker.market
+        return String(format: "%.2f%%", ticker.changeRate)
     }
     
     var volume: String {
-        return ticker.market
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.maximumFractionDigits = 0
+        
+        let suffixes = ["", "K", "M", "B", "T"]
+        var value = ticker.volume
+        var suffixIndex = 0
+        
+        while value >= 1000 && suffixIndex < suffixes.count - 1 {
+            value /= 1000
+            suffixIndex += 1
+        }
+        
+        let formattedValue = numberFormatter.string(from: NSNumber(value: value)) ?? ""
+        return "\(formattedValue)\(suffixes[suffixIndex])"
     }
     
     var symbol: String {
