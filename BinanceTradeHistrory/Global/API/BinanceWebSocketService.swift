@@ -19,6 +19,8 @@ class BinanceWebSocketService: NSObject {
     let tickerSubject = CurrentValueSubject<BinanceTradeTicker?, Never>(nil)
     var ticker: BinanceTradeTicker? { tickerSubject.value }
     
+    let currentCoinSubject = CurrentValueSubject<String?, Never>(nil)
+    
     private var webSocket: URLSessionWebSocketTask?
     
     func connect() {
@@ -28,8 +30,24 @@ class BinanceWebSocketService: NSObject {
         webSocket?.resume()
     }
     
-    func send() {
-        let symbol = "INJUSDT"
+    func send(withSymbol symbol: String?) {
+        guard let symbol = symbol else { return print("심볼 없음")}
+        
+        if let currentSymbol = currentCoinSubject.value {
+            // Unsubscribe from the current symbol
+            let unsubscribeStream = "\(currentSymbol.lowercased())@aggTrade"
+            let unsubscribeMessage = """
+                {"method": "UNSUBSCRIBE", "params": ["\(unsubscribeStream)"], "id": 1}
+                """
+            webSocket?.send(.string(unsubscribeMessage), completionHandler: { error in
+                if let error = error {
+                    print("Binance unsubscribe error: \(error.localizedDescription)")
+                }
+            })
+        }
+        
+        currentCoinSubject.send(symbol)
+        
         let stream = "\(symbol.lowercased())@aggTrade"
         let message = """
         {"method": "SUBSCRIBE", "params": ["\(stream)"], "id": 1}
@@ -49,7 +67,7 @@ class BinanceWebSocketService: NSObject {
             case .success(let message):
                 switch message {
                 case .string(let text):
-//                    print("Received text message: \(text)")
+                    //                    print("Received text message: \(text)")
                     if let data = text.data(using: .utf8) {
                         self.onReceiveData(data)
                     }
@@ -65,14 +83,25 @@ class BinanceWebSocketService: NSObject {
     
     private func onReceiveData(_ data: Data) {
         DispatchQueue.global(qos: .background).async {
-            guard let ticker = try? JSONDecoder().decode(BinanceTradeTicker.self, from: data) else {
-                return print("BinanceTicker 객체 생성 에러")
-            }
+            guard let ticker = try? JSONDecoder().decode(BinanceTradeTicker.self, from: data) else { return }
             
             let amount = (Decimal(string: ticker.price) ?? 0) * (Decimal(string: ticker.quantity) ?? 0)
-            guard amount > 10000 else { return }
-            print(ticker)
+            let decimalNumber = NSDecimalNumber(decimal: amount)
+            let integerAmount = decimalNumber.intValue
+            
+            guard integerAmount > self.fetchUserAmount() else { return }
+            
             self.tickerSubject.send(ticker)
+        }
+    }
+    
+    private func fetchUserAmount() -> Int {
+        guard let numberString = UserDefaults.standard.string(forKey: "AmountKey") else { return 0 }
+        let formattedString = numberString.replacingOccurrences(of: ",", with: "")
+        if let number = Int(formattedString) {
+            return number
+        } else {
+            return 0
         }
     }
     
@@ -88,7 +117,11 @@ extension BinanceWebSocketService: URLSessionWebSocketDelegate {
     func urlSession(_ session: URLSession, webSocketTask: URLSessionWebSocketTask, didOpenWithProtocol protocol: String?) {
         print("Binance websocket connection opened.")
         isConnected = true
-        send()
+        if let currentSymbol = currentCoinSubject.value {
+            send(withSymbol: currentSymbol)
+        } else {
+            send(withSymbol: "BTCUSDT")
+        }
         receive()
     }
     

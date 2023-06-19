@@ -14,6 +14,8 @@ class CoinListController: UITableViewController {
     
     // MARK: Properties
     
+    private let socket = BinanceWebSocketService.shared
+    weak var mainTabController: MainTabController?
     private var vm = CoinListViewModel()
     private let disposeBag = DisposeBag()
     private let searchController = UISearchController(searchResultsController: nil)
@@ -23,7 +25,7 @@ class CoinListController: UITableViewController {
     
     private var countdownButton: UIBarButtonItem!
     private var countdownTimer: Timer?
-    private var countdownValue: Int = 59
+    private var countdownValue: Int = 15
     
     // MARK: Lifecycle
     
@@ -125,7 +127,6 @@ class CoinListController: UITableViewController {
         /// 카운트 다운이 시작되면 버튼 타이틀을 변경하고, 1초마다 카운트 다운을 감소시키는 타이머를 시작합니다.
         countdownButton.title = "\(countdownValue)"
         countdownButton.isEnabled = false
-        countdownButton.tintColor = .systemGray
         countdownTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
             self?.updateCountdown()
         }
@@ -154,9 +155,11 @@ class CoinListController: UITableViewController {
             stopCountdownTimer()
         }
     }
-    
-    // MARK: - UITableViewDataSource
-    
+}
+
+// MARK: - UITableViewDataSource
+
+extension CoinListController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return inSearchMode ? vm.filterd.value.count : vm.coinlist.value.count
     }
@@ -170,15 +173,22 @@ class CoinListController: UITableViewController {
         
         return cell
     }
-    
-    // MARK: - UITableViewDelegate
-    
+}
+
+// MARK: - UITableViewDelegate
+
+extension CoinListController {
     override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         guard !inSearchMode else { return }
         searchController.dismiss(animated: false)
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let coin = inSearchMode ? vm.filterd.value[indexPath.row] : vm.coinlist.value[indexPath.row]
+        if socket.currentCoinSubject.value ?? "" != coin.symbol {
+            socket.send(withSymbol: coin.symbol)
+        }
+        mainTabController?.selectedIndex = 1
     }
 }
 

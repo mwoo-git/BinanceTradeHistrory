@@ -12,16 +12,14 @@ struct TradeHistoryCellViewModel {
     
     var time: String {
         let utcTimestamp = ticker.tradeTime / 1000
-        let utcOffset = TimeZone.current.secondsFromGMT()
-        let koreanTimestamp = utcTimestamp + TimeInterval(utcOffset) + 9 * 3600
-        let date = Date(timeIntervalSince1970: koreanTimestamp)
+        let date = Date(timeIntervalSince1970: TimeInterval(utcTimestamp))
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm:ss"
         
         return dateFormatter.string(from: date)
     }
-    
+
     var price: String {
         return ticker.price
     }

@@ -8,10 +8,12 @@
 import UIKit
 import Combine
 
-private let cellIdentifier = "ProfileCell"
+private let cellIdentifier = "TradeHistoryCell"
+private let headerIdentifier = "TradeHistoryHeader"
 
 class TradeHistoryController: UITableViewController {
     // MARK: - Properties
+    private let socket = BinanceWebSocketService.shared
     private var subscriptions = Set<AnyCancellable>()
     
     private var historyList = [BinanceTradeTicker]() {
@@ -27,14 +29,15 @@ class TradeHistoryController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        BinanceWebSocketService.shared.connect()
-        subscribeToTickerUpdates()
+        socket.connect()
+        subscribe()
     }
     
     // MARK: - Helpers
     
     func configureUI() {
-        navigationItem.title = "바이낸스 미니 체결"
+        navigationItem.title = "BTCUSDT 미니 체결"
+        navigationController?.navigationBar.prefersLargeTitles = false
         view.backgroundColor = .systemBackground
         
         tableView.separatorStyle = .singleLine
@@ -42,19 +45,40 @@ class TradeHistoryController: UITableViewController {
         tableView.layoutMargins = .zero
         
         tableView.register(TradeHistoryCell.self, forCellReuseIdentifier: cellIdentifier)
+        tableView.register(TradeHistoryHeader.self,
+                           forHeaderFooterViewReuseIdentifier: headerIdentifier)
         tableView.rowHeight = 50
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "설정",
+                                                            style: .plain,
+                                                            target: self,
+                                                            action: #selector(handleSetting))
     }
     
-    func subscribeToTickerUpdates() {
-        BinanceWebSocketService.shared.tickerSubject
+    func subscribe() {
+        socket.tickerSubject
             .sink { [weak self] ticker in
                 guard let ticker = ticker else { return }
                 self?.historyList.insert(ticker, at: 0)
             }
             .store(in: &subscriptions)
+        
+        socket.currentCoinSubject
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] coin in
+                guard let coin = coin else { return }
+                self?.historyList.removeAll()
+                self?.navigationItem.title = "\(coin.uppercased()) 미니 체결"
+            }
+            .store(in: &subscriptions)
     }
     
     // MARK: - Actions
+    
+    @objc func handleSetting() {
+        let controller = SettingController()
+        navigationController?.pushViewController(controller, animated: true)
+    }
 }
 
 // MARK: - TableViewDataSource

@@ -10,13 +10,12 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    let socket = BinanceWebSocketService.shared
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
-//        window?.rootViewController = MainTabController()
-        window?.rootViewController = UINavigationController(rootViewController: CoinListController())
+        window?.rootViewController = MainTabController()
         window?.makeKeyAndVisible()
     }
 
@@ -38,8 +37,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneWillEnterForeground(_ scene: UIScene) {
-        // Called as the scene transitions from the background to the foreground.
-        // Use this method to undo the changes made on entering the background.
+        guard socket.currentCoinSubject.value != nil else { return }
+        socket.connect()
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
