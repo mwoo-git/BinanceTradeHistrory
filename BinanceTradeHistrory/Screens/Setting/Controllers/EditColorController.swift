@@ -21,7 +21,7 @@ class EditColorController: UIViewController {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "매수/매도"
+        label.text = "매수 / 매도"
         label.textColor = .lightGray
         label.font = UIFont.systemFont(ofSize: 14)
         return label
