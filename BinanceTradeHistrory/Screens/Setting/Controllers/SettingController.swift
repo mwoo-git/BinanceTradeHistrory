@@ -78,7 +78,7 @@ extension SettingController {
                 let controller = EditAmountController()
                 navigationController?.pushViewController(controller, animated: true)
             case 1:
-                let controller = SettingController()
+                let controller = EditColorController()
                 navigationController?.pushViewController(controller, animated: true)
             default:
                 break

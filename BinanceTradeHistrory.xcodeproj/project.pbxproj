@@ -36,6 +36,7 @@
 		CE9E48452A26179B00CA4E81 /* Binance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E48442A26179B00CA4E81 /* Binance.swift */; };
 		CEA6A5072A373DDA00A325F1 /* EditAmountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6A5062A373DDA00A325F1 /* EditAmountController.swift */; };
 		CEC07EFD2A265E84001F6B01 /* TradeHistoryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC07EFC2A265E84001F6B01 /* TradeHistoryCellViewModel.swift */; };
+		CEE2E8162A45B4F400C78D50 /* EditColorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE2E8152A45B4F400C78D50 /* EditColorController.swift */; };
 		E9606120F69001694F75771A /* Pods_BinanceTradeHistrory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48BD6A6E6C8A831731D3E4C3 /* Pods_BinanceTradeHistrory.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +96,7 @@
 		CE9E48442A26179B00CA4E81 /* Binance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binance.swift; sourceTree = "<group>"; };
 		CEA6A5062A373DDA00A325F1 /* EditAmountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAmountController.swift; sourceTree = "<group>"; };
 		CEC07EFC2A265E84001F6B01 /* TradeHistoryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeHistoryCellViewModel.swift; sourceTree = "<group>"; };
+		CEE2E8152A45B4F400C78D50 /* EditColorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditColorController.swift; sourceTree = "<group>"; };
 		FB5D670417DB16FDEEF835E0 /* Pods_BinanceTradeHistrory_BinanceTradeHistroryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BinanceTradeHistrory_BinanceTradeHistroryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC5ADA725D5ED7DD78C7421B /* Pods-BinanceTradeHistrory-BinanceTradeHistroryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinanceTradeHistrory-BinanceTradeHistroryUITests.release.xcconfig"; path = "Target Support Files/Pods-BinanceTradeHistrory-BinanceTradeHistroryUITests/Pods-BinanceTradeHistrory-BinanceTradeHistroryUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -345,6 +347,7 @@
 			children = (
 				CE94AAE32A373939008A55B3 /* SettingController.swift */,
 				CEA6A5062A373DDA00A325F1 /* EditAmountController.swift */,
+				CEE2E8152A45B4F400C78D50 /* EditColorController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -626,6 +629,7 @@
 				CE398E132A2605BD001B76B1 /* MainTabContoller.swift in Sources */,
 				CEA6A5072A373DDA00A325F1 /* EditAmountController.swift in Sources */,
 				CE9E48452A26179B00CA4E81 /* Binance.swift in Sources */,
+				CEE2E8162A45B4F400C78D50 /* EditColorController.swift in Sources */,
 				CEC07EFD2A265E84001F6B01 /* TradeHistoryCellViewModel.swift in Sources */,
 				CE3F3CD02A2DCBFF00E8888D /* BinanceRestService.swift in Sources */,
 				CE3F3CCA2A2DC8C600E8888D /* CoinListController.swift in Sources */,
