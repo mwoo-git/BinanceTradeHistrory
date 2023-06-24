@@ -10,12 +10,12 @@ import UIKit
 class EditColorController: UIViewController {
     // MARK: - Properties
     
-    private let colorKey = "isBlueKey"
-    
     private var isBlue = false {
         didSet {
             buyCircleView.backgroundColor = isBlue ? .systemRed : .systemGreen
             sellCircleView.backgroundColor = isBlue ? .systemBlue : .systemRed
+            
+            NotificationCenter.default.post(name: NSNotification.Name(Notification.ColorChangedNotification), object: nil)
         }
     }
     
@@ -85,13 +85,13 @@ class EditColorController: UIViewController {
     }
     
     func configureColor() {
-        isBlue = UserDefaults.standard.bool(forKey: colorKey)
+        isBlue = UserDefaults.standard.bool(forKey: UserDefault.colorKey)
     }
     
     // MARK: - Helpers
     
     @objc func handleEditing() {
-        UserDefaults.standard.set(isBlue ? false : true, forKey: colorKey)
+        UserDefaults.standard.set(isBlue ? false : true, forKey: UserDefault.colorKey)
         configureColor()
     }
     

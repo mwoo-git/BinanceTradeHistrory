@@ -60,6 +60,6 @@ class TradeHistoryCell: UITableViewCell {
         timeLabel.text = vm.time
         priceLabel.text = vm.price
         amountLabel.text = vm.amount
-        amountLabel.textColor = vm.ticker.trade ? .systemRed : .systemGreen
+        amountLabel.textColor = vm.ticker.trade ? vm.sell : vm.buy
     }
 }

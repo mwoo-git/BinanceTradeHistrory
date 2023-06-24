@@ -96,7 +96,7 @@ class BinanceWebSocketService: NSObject {
     }
     
     private func fetchUserAmount() -> Int {
-        guard let numberString = UserDefaults.standard.string(forKey: "AmountKey") else { return 10000 }
+        guard let numberString = UserDefaults.standard.string(forKey: UserDefault.amountKey) else { return 10000 }
         let formattedString = numberString.replacingOccurrences(of: ",", with: "")
         if let number = Int(formattedString) {
             return number

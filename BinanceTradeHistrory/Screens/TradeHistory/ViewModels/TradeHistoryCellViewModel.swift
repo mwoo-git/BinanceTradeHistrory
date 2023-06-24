@@ -5,10 +5,12 @@
 //  Created by Mac on 2023/05/31.
 //
 
-import Foundation
+import UIKit
 
 struct TradeHistoryCellViewModel {
     let ticker: BinanceTradeTicker
+    
+    let isBlue = UserDefaults.standard.bool(forKey: UserDefault.colorKey)
     
     var time: String {
         let utcTimestamp = ticker.tradeTime / 1000
@@ -33,5 +35,13 @@ struct TradeHistoryCellViewModel {
         let decimalNumber = NSDecimalNumber(decimal: amount)
         let integerAmount = decimalNumber.intValue
         return String(describing: integerAmount)
+    }
+    
+    var buy: UIColor {
+        return isBlue ? .systemRed : .systemGreen
+    }
+    
+    var sell: UIColor {
+        return isBlue ? .systemBlue : .systemRed
     }
 }

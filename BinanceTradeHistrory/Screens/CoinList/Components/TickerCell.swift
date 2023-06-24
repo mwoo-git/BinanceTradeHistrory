@@ -81,7 +81,7 @@ class TickerCell: UITableViewCell {
         nameLabel.text = vm.symbol
         volumeLabel.text = "Vol \(vm.volume) USDT"
         changeRateLabel.text = vm.ticker.changeRate > 0 ? "+\(vm.changeRate)" : vm.changeRate
-        changeRateLabel.textColor = vm.ticker.changeRate > 0 ? .systemGreen : .systemRed
+        changeRateLabel.textColor = vm.ticker.changeRate > 0 ? vm.buy : vm.sell
         priceLabel.text = vm.price
     }
 }

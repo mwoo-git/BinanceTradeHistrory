@@ -5,10 +5,12 @@
 //  Created by Mac on 2023/06/05.
 //
 
-import Foundation
+import UIKit
 
 struct TickerViewModel {
     let ticker: BinanceTicker
+    
+    let isBlue = UserDefaults.standard.bool(forKey: UserDefault.colorKey)
     
     var market: String {
         return ticker.market
@@ -42,6 +44,14 @@ struct TickerViewModel {
     
     var symbol: String {
         return ticker.market
+    }
+    
+    var buy: UIColor {
+        return isBlue ? .systemRed : .systemGreen
+    }
+    
+    var sell: UIColor {
+        return isBlue ? .systemBlue : .systemRed
     }
     
     init(ticker: BinanceTicker) {

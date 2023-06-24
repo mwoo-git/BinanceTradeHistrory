@@ -10,8 +10,6 @@ import UIKit
 class EditAmountController: UIViewController {
     // MARK: - Properties
     
-    private let amountKey = "AmountKey"
-    
     private let amountLabel: UILabel = {
         let label = UILabel()
         label.text = "순간거래대금(USDT) 조회조건"
@@ -38,15 +36,6 @@ class EditAmountController: UIViewController {
         label.numberOfLines = 0
         label.lineBreakMode = .byCharWrapping
         return label
-    }()
-    
-    private lazy var activityIndicator: UIActivityIndicatorView = {
-        let activityIndicator = UIActivityIndicatorView()
-        activityIndicator.center = self.splitViewController?.view.center ?? CGPoint()
-        activityIndicator.style = UIActivityIndicatorView.Style.medium
-        activityIndicator.startAnimating()
-        activityIndicator.isHidden = false
-        return activityIndicator
     }()
     
     // MARK: - Lifecycle
@@ -95,7 +84,7 @@ class EditAmountController: UIViewController {
     }
     
     private func configureTextField() {
-        let savedAmount = UserDefaults.standard.string(forKey: amountKey)
+        let savedAmount = UserDefaults.standard.string(forKey: UserDefault.amountKey)
         textField.text = savedAmount
     }
     
@@ -104,17 +93,8 @@ class EditAmountController: UIViewController {
     
     @objc func handleEndEditing() {
         guard let text = textField.text else { return }
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: activityIndicator)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            UserDefaults.standard.set(text, forKey: self.amountKey)
-            self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "완료",
-                                                                style: .plain,
-                                                                target: self,
-                                                                     action: #selector(self.handleEndEditing))
-            self.navigationItem.rightBarButtonItem?.isEnabled = false
-        }
+        UserDefaults.standard.set(text, forKey: UserDefault.amountKey)
+        navigationItem.rightBarButtonItem?.isEnabled = false
     }
 }
 
@@ -135,7 +115,7 @@ extension EditAmountController: UITextFieldDelegate {
         if let number = formatter.number(from: filteredText), let formattedText = formatter.string(from: number) {
             // 달러 표시 추가
             textField.text = formattedText
-            let amount = UserDefaults.standard.string(forKey: amountKey)
+            let amount = UserDefaults.standard.string(forKey: UserDefault.amountKey)
             if formattedText == amount {
                 navigationItem.rightBarButtonItem?.isEnabled = false
                 navigationItem.rightBarButtonItem?.tintColor = .lightGray

@@ -29,8 +29,13 @@ class TradeHistoryController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-        socket.connect()
         subscribe()
+        obserber()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        guard !socket.isConnected else { return }
+        socket.connect()
     }
     
     // MARK: - Helpers
@@ -73,11 +78,19 @@ class TradeHistoryController: UITableViewController {
             .store(in: &subscriptions)
     }
     
+    func obserber() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handleColorChanged), name: NSNotification.Name(Notification.ColorChangedNotification), object: nil)
+    }
+    
     // MARK: - Actions
     
     @objc func handleSetting() {
         let controller = SettingController()
         navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @objc func handleColorChanged() {
+        historyList.removeAll()
     }
 }
 

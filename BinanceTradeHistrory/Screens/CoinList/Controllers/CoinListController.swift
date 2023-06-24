@@ -37,6 +37,7 @@ class CoinListController: UITableViewController {
         configureUI()
         bind()
         configureCountdownButton()
+        obserber()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -109,6 +110,10 @@ class CoinListController: UITableViewController {
         navigationItem.rightBarButtonItem = countdownButton
     }
     
+    func obserber() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handleColorChanged), name: NSNotification.Name(Notification.ColorChangedNotification), object: nil)
+    }
+    
     // MARK: - Actions
     
     @objc func countdownButtonTapped() {
@@ -119,6 +124,10 @@ class CoinListController: UITableViewController {
         } else {
             stopCountdownTimer()
         }
+    }
+    
+    @objc func handleColorChanged() {
+        vm.updateCoinlist()
     }
     
     // MARK: - Timer

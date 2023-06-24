@@ -70,7 +70,7 @@ class CoinListViewModel {
     
     // MARK: - Update
     
-    private func updateCoinlist() {
+    func updateCoinlist() {
         Task {
             let sortedArray = await sortCoins()
             let viewModels = await convertToViewModels(withTickers: sortedArray)
