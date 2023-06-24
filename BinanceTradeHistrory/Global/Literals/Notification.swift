@@ -8,5 +8,7 @@
 import Foundation
 
 struct Notification {
-    static let ColorChangedNotification = "ColorChangedNotification"
+    static let colorChangedNotification = "ColorChangedNotification"
+    
+    static let amountChangedNotification = "AmountChangedNotification"
 }

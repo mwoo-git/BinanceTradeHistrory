@@ -111,7 +111,7 @@ class CoinListController: UITableViewController {
     }
     
     func obserber() {
-        NotificationCenter.default.addObserver(self, selector: #selector(handleColorChanged), name: NSNotification.Name(Notification.ColorChangedNotification), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleColorChanged), name: NSNotification.Name(Notification.colorChangedNotification), object: nil)
     }
     
     // MARK: - Actions

@@ -79,7 +79,9 @@ class TradeHistoryController: UITableViewController {
     }
     
     func obserber() {
-        NotificationCenter.default.addObserver(self, selector: #selector(handleColorChanged), name: NSNotification.Name(Notification.ColorChangedNotification), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleColorChanged), name: NSNotification.Name(Notification.colorChangedNotification), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(handleAmountChanged), name: NSNotification.Name(Notification.amountChangedNotification), object: nil)
     }
     
     // MARK: - Actions
@@ -90,6 +92,10 @@ class TradeHistoryController: UITableViewController {
     }
     
     @objc func handleColorChanged() {
+        historyList.removeAll()
+    }
+    
+    @objc func handleAmountChanged() {
         historyList.removeAll()
     }
 }

@@ -15,7 +15,7 @@ class EditColorController: UIViewController {
             buyCircleView.backgroundColor = isBlue ? .systemRed : .systemGreen
             sellCircleView.backgroundColor = isBlue ? .systemBlue : .systemRed
             
-            NotificationCenter.default.post(name: NSNotification.Name(Notification.ColorChangedNotification), object: nil)
+            NotificationCenter.default.post(name: NSNotification.Name(Notification.colorChangedNotification), object: nil)
         }
     }
     

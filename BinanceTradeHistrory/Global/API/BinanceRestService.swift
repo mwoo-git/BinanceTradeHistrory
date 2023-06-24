@@ -47,7 +47,7 @@ struct BinanceRestService {
             let binanceExchangeInfo = try JSONDecoder().decode(BinanceFuturesExchangeInfo.self, from: data)
             let filteredSymbols = binanceExchangeInfo.symbols.filter { $0.quoteAsset == "USDT" && $0.contractType == "PERPETUAL" && $0.status == "TRADING" }
             let binanceCoins = filteredSymbols.map { BinanceCoin(symbol: $0.symbol, baseAsset: $0.baseAsset, quoteAsset: $0.quoteAsset, status: $0.status) }
-            print(binanceCoins.count)
+            print("DEBUG: Fetch \(binanceCoins.count) coins.")
             return binanceCoins
         } catch {
             print("DEBUG: BinanceCoinDataService.fetchFuturesCoins() failed. \(error.localizedDescription)")
