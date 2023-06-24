@@ -74,7 +74,7 @@ class CoinListController: UITableViewController {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.hidesNavigationBarDuringPresentation = false
-        searchController.searchBar.placeholder = "코인명/심볼 검색"
+        searchController.searchBar.placeholder = "심볼 검색"
         navigationItem.searchController = searchController
         definesPresentationContext = false
         searchController.searchBar.setValue("취소", forKey: "cancelButtonText")
