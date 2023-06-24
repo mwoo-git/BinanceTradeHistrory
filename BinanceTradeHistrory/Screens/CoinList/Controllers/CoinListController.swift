@@ -40,13 +40,6 @@ class CoinListController: UITableViewController {
         obserber()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        // 타이머가 실행 중인 경우, 뷰가 사라질 때 타이머를 정지합니다.
-        stopCountdownTimer()
-    }
-    
     // MARK: - API
     
     func bind() {
@@ -119,11 +112,7 @@ class CoinListController: UITableViewController {
     @objc func countdownButtonTapped() {
         vm.fetchTickers()
         countdownValue = 15
-        if countdownTimer == nil {
-            startCountdownTimer()
-        } else {
-            stopCountdownTimer()
-        }
+        startCountdownTimer()
     }
     
     @objc func handleColorChanged() {
