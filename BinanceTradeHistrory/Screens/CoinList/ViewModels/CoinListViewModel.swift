@@ -26,11 +26,13 @@ class CoinListViewModel {
             updateCoinlist()
         }
     }
+    
     var coins: [BinanceCoin]? {
         didSet {
             fetchTickers()
         }
     }
+    
     var sort: SortCoins = .volume {
         didSet {
             updateCoinlist()
@@ -51,6 +53,7 @@ class CoinListViewModel {
                 let coins = try await BinanceRestService.fetchFuturesCoins()
                 self.coins = coins
             } catch {
+                Notification.post(withName: Notification.restApiStatusError)
                 print("DEBUG: fetchCoins() Failed.")
             }
         }
@@ -63,6 +66,7 @@ class CoinListViewModel {
                 let tickers = try await BinanceRestService.fetchTickers(withCoins: coins, type: .futures)
                 self.tickers = tickers
             } catch {
+                Notification.post(withName: Notification.restApiStatusError)
                 print("DEBUG: fetchTickers() Failed.")
             }
         }

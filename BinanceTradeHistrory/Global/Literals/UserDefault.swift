@@ -8,6 +8,7 @@
 import Foundation
 
 struct UserDefault {
+    // MARK: - Setting
     static let colorKey = "isBlueKey"
     static let amountKey = "AmountKey"
 }

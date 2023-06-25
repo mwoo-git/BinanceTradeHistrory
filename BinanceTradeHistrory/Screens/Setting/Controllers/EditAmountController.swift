@@ -94,9 +94,7 @@ class EditAmountController: UIViewController {
     @objc func handleEndEditing() {
         guard let text = textField.text else { return }
         UserDefaults.standard.set(text, forKey: UserDefault.amountKey)
-        
-        NotificationCenter.default.post(name: NSNotification.Name(Notification.amountChangedNotification), object: nil)
-        
+        Notification.post(withName: Notification.amountChanged)
         navigationItem.rightBarButtonItem?.isEnabled = false
     }
 }
