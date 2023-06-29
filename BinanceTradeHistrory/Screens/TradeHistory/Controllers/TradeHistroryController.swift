@@ -10,6 +10,7 @@ import Combine
 
 private let cellIdentifier = "TradeHistoryCell"
 private let headerIdentifier = "TradeHistoryHeader"
+private let footerIdentifier = "TradeHistoryFooter"
 
 class TradeHistoryController: UITableViewController {
     // MARK: - Properties
@@ -24,6 +25,12 @@ class TradeHistoryController: UITableViewController {
         }
     }
     
+    private let isConnectedLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -31,10 +38,11 @@ class TradeHistoryController: UITableViewController {
         configureUI()
         subscribe()
         obserber()
+        isConnected()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        guard !socket.isConnected else { return }
+        guard !socket.isConnectedSubject.value else { return }
         socket.connect()
     }
     
@@ -58,6 +66,7 @@ class TradeHistoryController: UITableViewController {
                                                             style: .plain,
                                                             target: self,
                                                             action: #selector(handleSetting))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: isConnectedLabel)
     }
     
     func subscribe() {
@@ -76,12 +85,25 @@ class TradeHistoryController: UITableViewController {
                 self?.navigationItem.title = "\(coin.uppercased()) 미니 체결"
             }
             .store(in: &subscriptions)
+        
+        socket.isConnectedSubject
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] isConnected in
+                self?.isConnectedLabel.text = isConnected ? "연결됨" : "연결안됨"
+                self?.isConnectedLabel.textColor = isConnected ? .systemGreen : .systemRed
+            }
+            .store(in: &subscriptions)
     }
     
     func obserber() {
         NotificationCenter.default.addObserver(self, selector: #selector(handleColorChanged), name: NSNotification.Name(Notification.colorChanged), object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(handleAmountChanged), name: NSNotification.Name(Notification.amountChanged), object: nil)
+    }
+    
+    func isConnected() {
+        isConnectedLabel.text = socket.isConnectedSubject.value ? "연결됨" : "연결안됨"
+        isConnectedLabel.textColor = socket.isConnectedSubject.value ? .systemGreen : .systemRed
     }
     
     // MARK: - Actions
@@ -121,5 +143,16 @@ extension TradeHistoryController {
         cell.selectionStyle = .none
         cell.vm = TradeHistoryCellViewModel(ticker: historyList[indexPath.row])
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        guard section == 0, historyList.isEmpty else { return nil }
+        
+        let footer = TradeHistoryFooter(reuseIdentifier: footerIdentifier)
+        return footer
+    }
+
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return section == 0 && historyList.isEmpty ? 200 : 0
     }
 }

@@ -35,6 +35,7 @@
 		CE809B7C2A48A23D00840641 /* UITabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE809B7B2A48A23D00840641 /* UITabbarController.swift */; };
 		CE94AAE42A373939008A55B3 /* SettingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE94AAE32A373939008A55B3 /* SettingController.swift */; };
 		CE94AAE62A373979008A55B3 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE94AAE52A373979008A55B3 /* SettingCell.swift */; };
+		CE9A8F912A4DB374007F7963 /* TradeHistoryFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9A8F902A4DB374007F7963 /* TradeHistoryFooter.swift */; };
 		CE9E48432A26176100CA4E81 /* BinanceWebSocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E48422A26176100CA4E81 /* BinanceWebSocketService.swift */; };
 		CE9E48452A26179B00CA4E81 /* Binance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E48442A26179B00CA4E81 /* Binance.swift */; };
 		CEA6A5072A373DDA00A325F1 /* EditAmountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6A5062A373DDA00A325F1 /* EditAmountController.swift */; };
@@ -98,6 +99,7 @@
 		CE809B7B2A48A23D00840641 /* UITabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabbarController.swift; sourceTree = "<group>"; };
 		CE94AAE32A373939008A55B3 /* SettingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingController.swift; sourceTree = "<group>"; };
 		CE94AAE52A373979008A55B3 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		CE9A8F902A4DB374007F7963 /* TradeHistoryFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeHistoryFooter.swift; sourceTree = "<group>"; };
 		CE9E48422A26176100CA4E81 /* BinanceWebSocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinanceWebSocketService.swift; sourceTree = "<group>"; };
 		CE9E48442A26179B00CA4E81 /* Binance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Binance.swift; sourceTree = "<group>"; };
 		CEA6A5062A373DDA00A325F1 /* EditAmountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAmountController.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 			children = (
 				CE398E212A260A8C001B76B1 /* TradeHistoryCell.swift */,
 				CE166DCF2A339E00008CA9DD /* TradeHistoryHeader.swift */,
+				CE9A8F902A4DB374007F7963 /* TradeHistoryFooter.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -650,6 +653,7 @@
 				CE9E48452A26179B00CA4E81 /* Binance.swift in Sources */,
 				CE809B7A2A474F3400840641 /* UserDefault.swift in Sources */,
 				CEE2E8162A45B4F400C78D50 /* EditColorController.swift in Sources */,
+				CE9A8F912A4DB374007F7963 /* TradeHistoryFooter.swift in Sources */,
 				CEC07EFD2A265E84001F6B01 /* TradeHistoryCellViewModel.swift in Sources */,
 				CE3F3CD02A2DCBFF00E8888D /* BinanceRestService.swift in Sources */,
 				CE3F3CCA2A2DC8C600E8888D /* CoinListController.swift in Sources */,
@@ -837,6 +841,7 @@
 				DEVELOPMENT_TEAM = 7L7CZY9WNN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BinanceTradeHistrory/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "미니체결";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -865,6 +870,7 @@
 				DEVELOPMENT_TEAM = 7L7CZY9WNN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BinanceTradeHistrory/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "미니체결";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

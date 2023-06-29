@@ -13,8 +13,8 @@ class BinanceWebSocketService: NSObject {
     static let shared = BinanceWebSocketService()
     
     private override init() {}
-    
-    @Published var isConnected = false
+
+    let isConnectedSubject = CurrentValueSubject<Bool, Never>(false)
     
     let tickerSubject = CurrentValueSubject<BinanceTradeTicker?, Never>(nil)
     var ticker: BinanceTradeTicker? { tickerSubject.value }
@@ -116,7 +116,7 @@ class BinanceWebSocketService: NSObject {
 extension BinanceWebSocketService: URLSessionWebSocketDelegate {
     func urlSession(_ session: URLSession, webSocketTask: URLSessionWebSocketTask, didOpenWithProtocol protocol: String?) {
         print("Binance websocket connection opened.")
-        isConnected = true
+        isConnectedSubject.send(true)
         if let currentSymbol = currentCoinSubject.value {
             send(withSymbol: currentSymbol)
         } else {
@@ -127,7 +127,7 @@ extension BinanceWebSocketService: URLSessionWebSocketDelegate {
     
     func urlSession(_ session: URLSession, webSocketTask: URLSessionWebSocketTask, didCloseWith closeCode: URLSessionWebSocketTask.CloseCode, reason: Data?) {
         print("Binance websocket connection closed.")
-        isConnected = false
+        isConnectedSubject.send(false)
     }
 }
 
