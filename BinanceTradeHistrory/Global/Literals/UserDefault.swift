@@ -11,4 +11,5 @@ struct UserDefault {
     // MARK: - Setting
     static let colorKey = "isBlueKey"
     static let amountKey = "AmountKey"
+    static let themeMode = "ThemeMode"
 }
