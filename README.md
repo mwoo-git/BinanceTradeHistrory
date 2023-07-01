@@ -15,13 +15,13 @@
 
 진짜 큰손들의 거래내역을 손쉽게 팔로우해보세요.
 
-<!--<br/>-->
-<!---->
-<!--### 🎆 Preview-->
-<!--|<img src="https://github.com/mwoo-git/SwiftUICoin/blob/main/SwiftUICoin/Image/01.png" width="300">|<img src="https://github.com/mwoo-git/SwiftUICoin/blob/main/SwiftUICoin/Image/02.png" width="300">|<img src="https://github.com/mwoo-git/SwiftUICoin/blob/main/SwiftUICoin/Image/03.png" width="300">|-->
-<!--|:-:|:-:|:-:|-->
-<!---->
-<!--<br/>-->
+<br/>
+
+### 🎆 Preview
+|<img src="https://github.com/mwoo-git/BinanceTradeHistrory/blob/develop/BinanceTradeHistrory/Global/Images/001.png" width="300">|<img src="https://github.com/mwoo-git/BinanceTradeHistrory/blob/develop/BinanceTradeHistrory/Global/Images/002.jpeg" width="300">|<img src="https://github.com/mwoo-git/BinanceTradeHistrory/blob/develop/BinanceTradeHistrory/Global/Images/003.jpeg" width="300">|<img src="https://github.com/mwoo-git/BinanceTradeHistrory/blob/develop/BinanceTradeHistrory/Global/Images/004.jpeg" width="300">|<img src="https://github.com/mwoo-git/BinanceTradeHistrory/blob/develop/BinanceTradeHistrory/Global/Images/005.jpeg" width="300">|<img src="https://github.com/mwoo-git/BinanceTradeHistrory/blob/develop/BinanceTradeHistrory/Global/Images/006.jpeg" width="300">|
+|:-:|:-:|:-:|
+
+<br/>
 
 ### 🛠 Development Environment
 
