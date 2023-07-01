@@ -10,6 +10,12 @@
 		1AE71D9B35BA5504BBBE7F89 /* Pods_BinanceTradeHistrory_BinanceTradeHistroryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB5D670417DB16FDEEF835E0 /* Pods_BinanceTradeHistrory_BinanceTradeHistroryUITests.framework */; };
 		765C101C0E2DD6798AD0317C /* Pods_BinanceTradeHistroryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C1DDD9240215447E07215E4 /* Pods_BinanceTradeHistroryTests.framework */; };
 		CE166DD02A339E00008CA9DD /* TradeHistoryHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE166DCF2A339E00008CA9DD /* TradeHistoryHeader.swift */; };
+		CE2160152A501C7100CEF19D /* 005.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CE21600F2A501C7000CEF19D /* 005.jpeg */; };
+		CE2160162A501C7100CEF19D /* 001.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2160102A501C7100CEF19D /* 001.png */; };
+		CE2160172A501C7100CEF19D /* 004.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CE2160112A501C7100CEF19D /* 004.jpeg */; };
+		CE2160182A501C7100CEF19D /* 002.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CE2160122A501C7100CEF19D /* 002.jpeg */; };
+		CE2160192A501C7100CEF19D /* 006.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CE2160132A501C7100CEF19D /* 006.jpeg */; };
+		CE21601A2A501C7100CEF19D /* 003.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = CE2160142A501C7100CEF19D /* 003.jpeg */; };
 		CE398DDC2A26051D001B76B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE398DDB2A26051D001B76B1 /* AppDelegate.swift */; };
 		CE398DDE2A26051D001B76B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE398DDD2A26051D001B76B1 /* SceneDelegate.swift */; };
 		CE398DE02A26051D001B76B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE398DDF2A26051D001B76B1 /* ViewController.swift */; };
@@ -71,6 +77,13 @@
 		9E170BA94DD00A4E45D7AF85 /* Pods-BinanceTradeHistrory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinanceTradeHistrory.release.xcconfig"; path = "Target Support Files/Pods-BinanceTradeHistrory/Pods-BinanceTradeHistrory.release.xcconfig"; sourceTree = "<group>"; };
 		C8453A2F51A978DB3D99DA02 /* Pods-BinanceTradeHistrory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinanceTradeHistrory.debug.xcconfig"; path = "Target Support Files/Pods-BinanceTradeHistrory/Pods-BinanceTradeHistrory.debug.xcconfig"; sourceTree = "<group>"; };
 		CE166DCF2A339E00008CA9DD /* TradeHistoryHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeHistoryHeader.swift; sourceTree = "<group>"; };
+		CE215FF52A50127D00CEF19D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CE21600F2A501C7000CEF19D /* 005.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 005.jpeg; sourceTree = "<group>"; };
+		CE2160102A501C7100CEF19D /* 001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 001.png; sourceTree = "<group>"; };
+		CE2160112A501C7100CEF19D /* 004.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 004.jpeg; sourceTree = "<group>"; };
+		CE2160122A501C7100CEF19D /* 002.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 002.jpeg; sourceTree = "<group>"; };
+		CE2160132A501C7100CEF19D /* 006.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 006.jpeg; sourceTree = "<group>"; };
+		CE2160142A501C7100CEF19D /* 003.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 003.jpeg; sourceTree = "<group>"; };
 		CE398DD82A26051D001B76B1 /* BinanceTradeHistrory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BinanceTradeHistrory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE398DDB2A26051D001B76B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE398DDD2A26051D001B76B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -162,9 +175,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		CE21601B2A501C7B00CEF19D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CE2160102A501C7100CEF19D /* 001.png */,
+				CE2160122A501C7100CEF19D /* 002.jpeg */,
+				CE2160142A501C7100CEF19D /* 003.jpeg */,
+				CE2160112A501C7100CEF19D /* 004.jpeg */,
+				CE21600F2A501C7000CEF19D /* 005.jpeg */,
+				CE2160132A501C7100CEF19D /* 006.jpeg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		CE398DCF2A26051D001B76B1 = {
 			isa = PBXGroup;
 			children = (
+				CE215FF52A50127D00CEF19D /* README.md */,
 				CE398E1C2A2609F3001B76B1 /* .gitignore */,
 				CE398DDA2A26051D001B76B1 /* BinanceTradeHistrory */,
 				CE398DF42A260520001B76B1 /* BinanceTradeHistroryTests */,
@@ -188,8 +215,8 @@
 		CE398DDA2A26051D001B76B1 /* BinanceTradeHistrory */ = {
 			isa = PBXGroup;
 			children = (
-				CE398E0F2A26054F001B76B1 /* Screens */,
 				CE398E0E2A260546001B76B1 /* Global */,
+				CE398E0F2A26054F001B76B1 /* Screens */,
 				CE398DDB2A26051D001B76B1 /* AppDelegate.swift */,
 				CE398DDD2A26051D001B76B1 /* SceneDelegate.swift */,
 				CE398DDF2A26051D001B76B1 /* ViewController.swift */,
@@ -226,6 +253,7 @@
 				CE398E172A260662001B76B1 /* Models */,
 				CE398E232A260C6B001B76B1 /* Extensions */,
 				CE809B762A474B1700840641 /* Literals */,
+				CE21601B2A501C7B00CEF19D /* Images */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -233,10 +261,10 @@
 		CE398E0F2A26054F001B76B1 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				CE9A8F922A4DFD68007F7963 /* Launch */,
 				CE3F3CC52A2DC88C00E8888D /* CoinList */,
 				CE398E142A260642001B76B1 /* TradeHistory */,
 				CE94AADF2A3738B8008A55B3 /* Setting */,
+				CE9A8F922A4DFD68007F7963 /* Launch */,
 				CE398E102A260559001B76B1 /* main */,
 			);
 			path = Screens;
@@ -396,7 +424,6 @@
 				CE9A8F932A4DFD95007F7963 /* Contollers */,
 			);
 			name = Launch;
-			path = "ㅣㅕ무초";
 			sourceTree = "<group>";
 		};
 		CE9A8F932A4DFD95007F7963 /* Contollers */ = {
@@ -526,8 +553,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE398E1D2A2609F3001B76B1 /* .gitignore in Resources */,
+				CE21601A2A501C7100CEF19D /* 003.jpeg in Resources */,
+				CE2160152A501C7100CEF19D /* 005.jpeg in Resources */,
+				CE2160172A501C7100CEF19D /* 004.jpeg in Resources */,
 				CE398DEB2A260520001B76B1 /* LaunchScreen.storyboard in Resources */,
+				CE2160162A501C7100CEF19D /* 001.png in Resources */,
 				CE398DE82A260520001B76B1 /* Assets.xcassets in Resources */,
+				CE2160192A501C7100CEF19D /* 006.jpeg in Resources */,
+				CE2160182A501C7100CEF19D /* 002.jpeg in Resources */,
 				CE398DE32A26051D001B76B1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -858,7 +891,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 7L7CZY9WNN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BinanceTradeHistrory/Info.plist;
@@ -866,7 +899,8 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -874,9 +908,12 @@
 				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = BinanceTradeHistrory.BinanceTradeHistrory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -887,7 +924,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 7L7CZY9WNN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BinanceTradeHistrory/Info.plist;
@@ -895,7 +932,8 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -903,9 +941,12 @@
 				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = BinanceTradeHistrory.BinanceTradeHistrory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
