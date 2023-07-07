@@ -1,6 +1,6 @@
 <p>
-  <a href = "https://apps.apple.com/kr/app/%EB%AF%B8%EB%8B%88%EC%B2%B4%EA%B2%B0-%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8-%EB%82%98%EB%A7%8C%EC%9D%98-%EC%B2%B4%EA%B2%B0-%EB%82%B4%EC%97%AD/id6450795189">
-    <img src = "https://github.com/mwoo-git/SwiftUICoin/blob/main/SwiftUICoin/Image/1.png">
+  <a href="https://apps.apple.com/kr/app/%EB%AF%B8%EB%8B%88%EC%B2%B4%EA%B2%B0-%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8-%EB%82%98%EB%A7%8C%EC%9D%98-%EC%B2%B4%EA%B2%B0-%EB%82%B4%EC%97%AD/id6450795189">
+    미니체결 앱스토어 바로가기
   </a>
 </p>
 
