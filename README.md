@@ -1,8 +1,8 @@
-<!--<p>-->
-<!--  <a href = "https://apps.apple.com/us/app/%EB%B8%94%EB%A1%9D%EC%99%80%EC%9D%B4%EB%93%9C/id6444627253">-->
-<!--    <img src = "https://github.com/mwoo-git/SwiftUICoin/blob/main/SwiftUICoin/Image/1.png">-->
-<!--  </a>-->
-<!--</p>-->
+<p>
+  <a href="https://apps.apple.com/kr/app/%EB%AF%B8%EB%8B%88%EC%B2%B4%EA%B2%B0-%EB%B9%84%ED%8A%B8%EC%BD%94%EC%9D%B8-%EB%82%98%EB%A7%8C%EC%9D%98-%EC%B2%B4%EA%B2%B0-%EB%82%B4%EC%97%AD/id6450795189">
+    미니체결 앱스토어 바로가기
+  </a>
+</p>
 
 ### 💡 미니체결
 미니체결은 바이낸스 USDT 선물의 체결 내역을 원하는 거래대금으로 필터링할 수 있는 앱입니다.
